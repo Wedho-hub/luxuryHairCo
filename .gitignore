@@ -1,0 +1,109 @@
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon
+
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Node.js dependencies
+/node_modules
+/backend/node_modules
+/frontend/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build output
+/dist
+/build
+/out
+/.next
+/.nuxt
+/.expo
+/.turbo
+
+# Dependency directories
+.pnp/
+.pnp.js
+
+# Environment files
+# Keep local secrets and service credentials out of git
+.env
+/frontend/.env
+/backend/.env
+.env.*.local
+.env.local
+.env.test
+.env.production
+
+# Test output
+/coverage
+/coverage/**/*
+*.lcov
+
+# Misc
+npm-debug.log*
+yarn-debug.log*
+*.tgz
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.lock
+
+# Editor backups
+*~
+*.bak
+*.orig
+
+# System files
+.DS_Store
+*.pem
+*.key
+
+# Cache folders
+.cache
+.tmp
+
+# Hidden tool metadata
+.sixth/
+
+# Ignore local npm and yarn files
+package-lock.json.tmp
+yarn.lock.tmp
+
+# IDE workspace metadata
+/.history
+
+# Recommended for full-stack web apps
+/dist/
+/build/
+/public/build/
+
+# If you're using Expo, Next.js, Nuxt, Create React App, or similar
+/node_modules/
+/.expo/
+/.next/
+/.nuxt/
+/.cache/
+
+# Prevent tracking of local debug and runtime state
+.env*
+.local
+
+# Lockfiles - keep if you want deterministic installs
+# If you do not want lockfiles in VCS, uncomment the next lines
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
