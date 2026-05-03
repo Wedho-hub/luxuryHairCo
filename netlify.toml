@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
+  command = "npm rebuild && npm run build"
   publish = "frontend/dist"
 
 [build.environment]
-  NODE_VERSION = "22"
+  NODE_VERSION = "18"
