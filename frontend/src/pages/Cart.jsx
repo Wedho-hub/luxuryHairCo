@@ -56,7 +56,7 @@ const Cart = () => {
                           >
                             −
                           </button>
-                          <span className="min-w-[2rem] text-center text-sm font-semibold">{item.quantity}</span>
+                          <span className="min-w-8 text-center text-sm font-semibold">{item.quantity}</span>
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
