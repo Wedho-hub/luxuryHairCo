@@ -14,8 +14,12 @@ const app = express();
 
 // Middleware
 app.use(cors({
-  origin: "http://localhost:5173"
+  origin: [
+    "http://localhost:5173",
+    "https://luxuryHairCo.netlify.app"
+  ]
 }));
+
 app.use(express.json());
 
 // Use the routes

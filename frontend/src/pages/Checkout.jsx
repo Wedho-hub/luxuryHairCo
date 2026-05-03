@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
 import Header from "../components/Header";
+import Seo from "../components/Seo";
 import Footer from "../components/Footer";
 import API from "../services/api";
 import { products } from "../data/products";
@@ -99,6 +100,11 @@ const Checkout = () => {
 
   return (
     <main className="bg-white text-gray-900">
+      <Seo
+        title="Checkout | Luxury Hair Co."
+        description="Complete your Luxury Hair Co. order with secure checkout and delivery details for premium hair bundles in Cape Town."
+        url="https://luxuryhairco.example.com/checkout"
+      />
       <Header />
       <section className="bg-pink-50 py-14 px-6">
         <div className="mx-auto max-w-6xl">

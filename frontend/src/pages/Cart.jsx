@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Seo from "../components/Seo";
 import { useCart } from "../context/CartContext";
 
 const Cart = () => {
@@ -6,6 +7,11 @@ const Cart = () => {
 
   return (
     <main className="bg-white text-gray-900">
+      <Seo
+        title="Your Cart | Luxury Hair Co."
+        description="Review the bundles in your cart before checking out securely with Luxury Hair Co. in Cape Town."
+        url="https://luxuryhairco.example.com/cart"
+      />
       <section className="bg-pink-50 py-14 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">

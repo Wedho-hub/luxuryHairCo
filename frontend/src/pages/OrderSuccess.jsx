@@ -1,5 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import Header from "../components/Header";
+import Seo from "../components/Seo";
 import Footer from "../components/Footer";
 
 const OrderSuccess = () => {
@@ -10,6 +11,11 @@ const OrderSuccess = () => {
 
   return (
     <main className="bg-white text-gray-900">
+      <Seo
+        title="Order confirmed | Luxury Hair Co."
+        description="Your hair bundle order is confirmed. Luxury Hair Co. will process your delivery and payment details shortly."
+        url="https://luxuryhairco.example.com/order-success"
+      />
       <Header />
       <section className="bg-pink-50 py-20 px-6">
         <div className="mx-auto max-w-4xl rounded-3xl bg-white p-10 shadow-sm">

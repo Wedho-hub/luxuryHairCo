@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import Seo from "../components/Seo";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import WhyUs from "../components/WhyUs";
@@ -13,6 +14,11 @@ import { products } from "../data/products";
 const Home = () => {
   return (
     <main className="bg-white text-gray-900">
+      <Seo
+        title="Luxury Hair Co. | Premium Hair Bundles in Cape Town"
+        description="Shop premium hair bundles in Cape Town with fast delivery, secure checkout, and expert styling support."
+        url="https://luxuryhairco.example.com/"
+      />
       <Header />
       <Hero />
       <Offer />

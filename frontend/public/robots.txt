@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://luxuryhairco.example.com/sitemap.xml
