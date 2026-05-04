@@ -13,11 +13,13 @@ connectDB();
 const app = express();
 
 // Middleware
+const allowedOrigins = [
+  "http://localhost:5173",
+  process.env.FRONTEND_URL || "https://luxuryhairco.vercel.app"
+].filter(Boolean);
+
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "https://luxuryHairCo.netlify.app"
-  ]
+  origin: allowedOrigins
 }));
 
 app.use(express.json());
