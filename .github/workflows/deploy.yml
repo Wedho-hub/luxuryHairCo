@@ -20,15 +20,17 @@ jobs:
         node-version: '20.19.0'
         cache: 'npm'
 
-    - name: Install dependencies
-      run: npm ci
+    - name: Install frontend dependencies
+      run: cd frontend && npm ci
 
-    - name: Build
-      run: npm run build
+    - name: Build frontend
+      run: cd frontend && npm run build
 
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
         publish_dir: ./frontend/dist
+        allow_empty_commit: true
