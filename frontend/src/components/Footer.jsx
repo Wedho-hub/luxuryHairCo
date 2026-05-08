@@ -1,9 +1,16 @@
 import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const Footer = () => {
   return (
     <footer id="site-footer" className="border-t border-white/10 bg-[#070307] text-[#f6e8d3]">
-      <div className="mx-auto grid max-w-7xl gap-8 px-6 py-14 md:grid-cols-3">
+      <div className="mx-auto max-w-7xl px-6 pt-10 pb-4">
+        <Link to="/" aria-label="Luxury Hair Co. — home">
+          <Logo />
+        </Link>
+        <div className="mt-1 h-px bg-white/10 mb-10" />
+      </div>
+      <div className="mx-auto grid max-w-7xl gap-8 px-6 pb-14 md:grid-cols-3">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-[#d4af37] font-serif">
             Contact

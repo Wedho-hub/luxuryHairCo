@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useInView } from "../hooks/useInView";
 
 const faqs = [
   {
@@ -41,42 +42,63 @@ const faqs = [
 
 const FAQ = () => {
   const [openId, setOpenId] = useState(null);
+  const [headerRef, headerVisible] = useInView();
+  const [listRef, listVisible] = useInView(0.05);
 
   return (
     <section className="py-20 px-6 bg-white">
       <div className="mx-auto max-w-3xl">
-        <div className="mb-14 text-center">
-          <p className="text-sm uppercase tracking-[0.28em] text-pink-500">FAQ</p>
+        <div
+          ref={headerRef}
+          className={`mb-14 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
+        >
+          <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">FAQ</p>
           <h2 className="mt-4 text-3xl font-bold text-black">Frequently asked questions</h2>
           <p className="mx-auto mt-4 max-w-xl text-gray-600">
             Everything you need to know before placing your order.
           </p>
         </div>
 
-        <div className="divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">
+        <div
+          ref={listRef}
+          className={`divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm ${
+            listVisible ? "animate-fade-up" : "opacity-0"
+          }`}
+          style={{ animationDelay: "150ms" }}
+        >
           {faqs.map((faq) => (
             <div key={faq.id}>
               <button
                 type="button"
                 onClick={() => setOpenId(openId === faq.id ? null : faq.id)}
-                className="flex w-full items-center justify-between gap-6 px-8 py-6 text-left transition hover:bg-gray-50"
+                className="flex w-full items-center justify-between gap-6 px-8 py-6 text-left transition-colors hover:bg-gray-50 active:bg-gray-100 select-none"
                 aria-expanded={openId === faq.id}
               >
                 <span className="text-sm font-semibold text-black">{faq.question}</span>
                 <span
-                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gray-200 text-gray-500 transition-all duration-200 ${
-                    openId === faq.id ? "rotate-45 border-pink-200 bg-pink-50 text-pink-600" : ""
+                  className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-gray-200 text-gray-500 transition-all duration-300 ${
+                    openId === faq.id
+                      ? "rotate-45 border-[#c73b6c]/30 bg-[#fdf0f4] text-[#c73b6c]"
+                      : ""
                   }`}
                   aria-hidden="true"
                 >
                   +
                 </span>
               </button>
-              {openId === faq.id && (
-                <div className="px-8 pb-6 text-sm leading-7 text-gray-600">
-                  {faq.answer}
+
+              {/* Smooth height accordion via CSS grid */}
+              <div
+                style={{
+                  display: "grid",
+                  gridTemplateRows: openId === faq.id ? "1fr" : "0fr",
+                  transition: "grid-template-rows 0.35s cubic-bezier(0.4,0,0.2,1)",
+                }}
+              >
+                <div style={{ overflow: "hidden" }}>
+                  <p className="px-8 pb-6 text-sm leading-7 text-gray-600">{faq.answer}</p>
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

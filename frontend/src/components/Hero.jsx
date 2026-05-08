@@ -8,38 +8,52 @@ const Hero = () => {
 
         {/* Copy */}
         <div className="max-w-2xl text-center lg:text-left">
-          <p className="inline-flex rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.24em] text-[#f7e7c2] shadow-sm shadow-black/20">
+          <p className="animate-fade-in inline-flex rounded-full bg-white/10 px-4 py-1 text-sm font-semibold uppercase tracking-[0.24em] text-[#f7e7c2] shadow-sm shadow-black/20">
             Raw Vietnamese Hair · Cape Town Delivery
           </p>
 
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+          <h1
+            className="animate-fade-up mt-6 text-4xl font-bold tracking-tight text-white sm:text-5xl"
+            style={{ animationDelay: "100ms" }}
+          >
             The Signature Collection
           </h1>
 
-          <p className="mt-4 text-lg leading-8 text-[#d7c8ae]">
+          <p
+            className="animate-fade-up mt-4 text-lg leading-8 text-[#d7c8ae]"
+            style={{ animationDelay: "200ms" }}
+          >
             Straight raw Vietnamese hair in 5×5 Closures and Full Frontals — 10&Prime; to 30&Prime;. Natural, Burgundy, Brown and Two-Tone colourways. R6,500 to R19,600.
           </p>
 
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start">
+          <div
+            className="animate-fade-up mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
+            style={{ animationDelay: "300ms" }}
+          >
+            {/* Rose discovery CTA */}
             <a
               href="#products"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d88e] to-[#f8e7b5] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-black shadow-xl shadow-[#d4af37]/20 transition hover:brightness-110"
+              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#a82e59] via-[#c73b6c] to-[#d94d7a] px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white shadow-xl shadow-[#c73b6c]/30 transition hover:brightness-110 active:scale-95 select-none"
             >
               Browse Collection
             </a>
 
+            {/* WhatsApp — keep green intent, ghost style here */}
             <a
               href="https://wa.me/27825551234?text=Hi%21+I%27d+like+to+browse+the+Signature+Collection."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-8 py-4 text-sm font-semibold text-[#f7e7c2] transition hover:border-[#d4af37] hover:text-white"
+              className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/10 px-8 py-4 text-sm font-semibold text-[#f7e7c2] transition hover:border-[#d4af37] hover:text-white active:scale-95 select-none"
             >
               Order on WhatsApp
             </a>
           </div>
 
           {/* Stats */}
-          <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/10 pt-8 text-center lg:text-left">
+          <div
+            className="animate-fade-up mt-10 grid grid-cols-3 gap-6 border-t border-white/10 pt-8 text-center lg:text-left"
+            style={{ animationDelay: "420ms" }}
+          >
             <div>
               <p className="text-2xl font-bold text-white">19</p>
               <p className="mt-1 text-xs uppercase tracking-[0.2em] text-[#c9bba0]">Style options</p>
@@ -56,7 +70,10 @@ const Hero = () => {
         </div>
 
         {/* Hero image */}
-        <div className="mt-12 lg:mt-0 lg:shrink-0">
+        <div
+          className="animate-slide-in-r mt-12 lg:mt-0 lg:shrink-0"
+          style={{ animationDelay: "150ms" }}
+        >
           <img
             src={HERO_IMAGE}
             alt="Raw Vietnamese hair — Luxury Hair Co. Signature Collection"

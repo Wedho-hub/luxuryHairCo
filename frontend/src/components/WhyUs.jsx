@@ -1,3 +1,5 @@
+import { useInView } from "../hooks/useInView";
+
 const features = [
   {
     title: "100% Human Hair",
@@ -42,10 +44,16 @@ const features = [
 ];
 
 const WhyUs = () => {
+  const [headerRef, headerVisible] = useInView();
+  const [gridRef, gridVisible] = useInView(0.05);
+
   return (
     <section className="py-20 px-6 bg-[#090307]">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 text-center">
+        <div
+          ref={headerRef}
+          className={`mb-14 text-center transition-none ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
+        >
           <p className="text-sm uppercase tracking-[0.28em] text-[#d4af37]">Why choose us</p>
           <h2 className="mt-4 text-3xl font-bold text-white">The Luxury Hair Co. difference</h2>
           <p className="mx-auto mt-4 max-w-xl text-[#c9bba0]">
@@ -53,13 +61,16 @@ const WhyUs = () => {
           </p>
         </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {features.map((feature) => (
+        <div ref={gridRef} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {features.map((feature, i) => (
             <div
               key={feature.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition hover:border-[#d4af37]/30 hover:bg-white/8"
+              className={`rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm transition-[border-color,background-color] hover:border-[#d4af37]/30 hover:bg-white/8 ${
+                gridVisible ? "animate-fade-up" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37]">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#d4af37]/10 text-[#d4af37] transition-transform group-hover:scale-110">
                 {feature.icon}
               </div>
               <h3 className="mt-5 text-base font-semibold text-white">{feature.title}</h3>

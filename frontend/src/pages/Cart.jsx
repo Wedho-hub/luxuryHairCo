@@ -15,12 +15,12 @@ const Cart = () => {
         url="https://luxuryhairco.github.io/cart"
       />
       <Header />
-      <section className="bg-pink-50 py-14 px-6">
+      <section className="bg-[#fdf0f4] py-14 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-pink-500">Your cart</p>
+                <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Your cart</p>
                 <h1 className="mt-4 text-3xl font-bold">Review your selected bundles</h1>
                 <p className="mt-3 max-w-2xl text-gray-600">
                   Add more bundles or proceed to checkout once you're ready.
@@ -34,12 +34,12 @@ const Cart = () => {
           </div>
 
           {cartItems.length === 0 ? (
-            <div className="rounded-3xl border border-pink-200 bg-pink-50 p-10 text-center text-gray-700">
+            <div className="rounded-3xl border border-[#c73b6c]/20 bg-[#fdf0f4] p-10 text-center text-gray-700">
               <p className="text-xl font-semibold">Your cart is empty.</p>
               <p className="mt-3 text-gray-600">Select bundles from the shop to add them to your cart.</p>
               <Link
                 to="/"
-                className="mt-6 inline-flex rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-900"
+                className="mt-6 inline-flex rounded-full bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-gray-900 active:scale-95 select-none"
               >
                 Back to shop
               </Link>
@@ -61,7 +61,7 @@ const Cart = () => {
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                            className="h-8 w-8 rounded-full bg-white text-sm font-semibold text-black transition hover:bg-gray-100"
+                            className="h-8 w-8 rounded-full bg-white text-sm font-semibold text-black transition hover:bg-gray-100 active:scale-90 select-none"
                           >
                             −
                           </button>
@@ -69,7 +69,7 @@ const Cart = () => {
                           <button
                             type="button"
                             onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                            className="h-8 w-8 rounded-full bg-white text-sm font-semibold text-black transition hover:bg-gray-100"
+                            className="h-8 w-8 rounded-full bg-white text-sm font-semibold text-black transition hover:bg-gray-100 active:scale-90 select-none"
                           >
                             +
                           </button>
@@ -78,7 +78,7 @@ const Cart = () => {
                         <button
                           type="button"
                           onClick={() => removeFromCart(item.id)}
-                          className="text-sm text-pink-600 transition hover:text-pink-800"
+                          className="text-sm text-[#c73b6c] transition hover:text-[#a82e59] active:opacity-70 select-none"
                         >
                           Remove
                         </button>
@@ -96,7 +96,7 @@ const Cart = () => {
                   </p>
                   <Link
                     to="/"
-                    className="mt-6 inline-flex rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-50"
+                    className="mt-6 inline-flex rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-50 active:scale-95 select-none"
                   >
                     Continue shopping
                   </Link>
@@ -113,16 +113,17 @@ const Cart = () => {
                       <span className="font-semibold text-black">Total:</span> R{cartTotal}
                     </p>
                   </div>
+                  {/* Gold — purchase/conversion CTA */}
                   <Link
                     to="/checkout"
-                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-6 py-4 text-sm font-semibold text-black shadow-lg shadow-[#d4af37]/20 transition hover:brightness-110"
+                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-6 py-4 text-sm font-semibold text-black shadow-lg shadow-[#d4af37]/20 transition hover:brightness-110 active:scale-95 select-none"
                   >
                     Proceed to checkout
                   </Link>
                   <button
                     type="button"
                     onClick={clearCart}
-                    className="mt-4 w-full rounded-full border border-gray-300 bg-white px-6 py-4 text-sm font-semibold text-gray-900 transition hover:bg-gray-50"
+                    className="mt-4 w-full rounded-full border border-gray-300 bg-white px-6 py-4 text-sm font-semibold text-gray-900 transition hover:bg-gray-50 active:scale-95 select-none"
                   >
                     Clear cart
                   </button>

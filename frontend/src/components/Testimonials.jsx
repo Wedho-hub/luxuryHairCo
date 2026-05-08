@@ -1,3 +1,5 @@
+import { useInView } from "../hooks/useInView";
+
 const testimonials = [
   {
     id: 1,
@@ -6,7 +8,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "The hair stayed soft even after two washes and the delivery was unbelievably fast. I'm absolutely obsessed — this is the best quality I've found in Cape Town.",
-    product: "Classic Bundle Set",
+    product: "Black Desire — 10″ Natural",
   },
   {
     id: 2,
@@ -15,7 +17,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "Perfect texture and zero tangles. My clients love the finished look every single time. I order exclusively from Luxury Hair Co. now.",
-    product: "Sleek Straight Set",
+    product: "Naomi Seduction — 26″ Natural",
   },
   {
     id: 3,
@@ -24,7 +26,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "Incredible service, fast WhatsApp support, and the bundle quality is genuinely premium. Even with delivery to JHB, my order arrived in two days. Highly recommend.",
-    product: "Curly Volume Set",
+    product: "Black Diamond Straight — 30″",
   },
 ];
 
@@ -45,22 +47,31 @@ const Stars = ({ count }) => (
 );
 
 const Testimonials = () => {
+  const [headerRef, headerVisible] = useInView();
+  const [gridRef, gridVisible] = useInView(0.05);
+
   return (
     <section className="py-20 px-6 bg-gray-50">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14 text-center">
-          <p className="text-sm uppercase tracking-[0.28em] text-pink-500">Reviews</p>
+        <div
+          ref={headerRef}
+          className={`mb-14 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
+        >
+          <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Reviews</p>
           <h2 className="mt-4 text-3xl font-bold text-black">Trusted by customers across South Africa</h2>
           <p className="mx-auto mt-4 max-w-2xl text-gray-600">
             Hear from shoppers who love the fit, feel, and fast delivery.
           </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((testimonial) => (
+        <div ref={gridRef} className="grid gap-6 md:grid-cols-3">
+          {testimonials.map((testimonial, i) => (
             <div
               key={testimonial.id}
-              className="flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-md"
+              className={`flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-md ${
+                gridVisible ? "animate-fade-up" : "opacity-0"
+              }`}
+              style={{ animationDelay: `${i * 110}ms` }}
             >
               <Stars count={testimonial.rating} />
               <p className="mt-5 flex-1 text-gray-700 leading-7">

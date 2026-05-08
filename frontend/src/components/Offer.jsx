@@ -1,9 +1,13 @@
+import { useInView } from "../hooks/useInView";
+
 const Offer = () => {
+  const [ref, visible] = useInView(0.2);
+
   return (
-    <section className="py-10 bg-[#090307] text-white">
+    <section ref={ref} className="py-10 bg-[#090307] text-white">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-6 text-center md:flex-row md:text-left">
-        <div>
-          <p className="text-sm uppercase tracking-[0.24em] text-[#d4af37]">
+        <div className={visible ? "animate-fade-up" : "opacity-0"}>
+          <p className="text-sm uppercase tracking-[0.24em] text-[#c73b6c]">
             Limited time offer
           </p>
           <h2 className="mt-2 text-3xl font-bold">
@@ -16,7 +20,10 @@ const Offer = () => {
 
         <a
           href="#discount"
-          className="inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-8 py-3 text-sm font-semibold text-black shadow-lg shadow-[#d4af37]/20 transition hover:brightness-110"
+          className={`inline-flex shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-[#a82e59] via-[#c73b6c] to-[#d94d7a] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-[#c73b6c]/30 transition hover:brightness-110 active:scale-95 select-none ${
+            visible ? "animate-fade-up" : "opacity-0"
+          }`}
+          style={{ animationDelay: "150ms" }}
         >
           Claim your discount
         </a>

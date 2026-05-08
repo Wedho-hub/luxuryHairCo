@@ -127,12 +127,12 @@ const Checkout = () => {
         url="https://luxuryhairco.github.io/checkout"
       />
       <Header />
-      <section className="bg-pink-50 py-14 px-6">
+      <section className="bg-[#fdf0f4] py-14 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-pink-500">Secure checkout</p>
+                <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Secure checkout</p>
                 <h1 className="mt-4 text-3xl font-bold">Complete your luxury bundle order</h1>
                 <p className="mt-3 max-w-2xl text-gray-600">
                   Fill in your delivery details and we'll confirm your order on WhatsApp within minutes.
@@ -146,7 +146,7 @@ const Checkout = () => {
           </div>
 
           {!productsToCheckout.length ? (
-            <div className="rounded-3xl border border-pink-200 bg-pink-50 p-10 text-center text-gray-700">
+            <div className="rounded-3xl border border-[#c73b6c]/20 bg-[#fdf0f4] p-10 text-center text-gray-700">
               <p className="text-xl font-semibold">No bundle selected yet.</p>
               <p className="mt-3 text-gray-600">
                 Pick one or more products from the shop before checking out.
@@ -163,7 +163,7 @@ const Checkout = () => {
               <div>
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
                   <h2 className="text-xl font-semibold">Order summary</h2>
-                  <div className="mt-6 space-y-4 rounded-3xl border border-pink-100 bg-pink-50 p-6 text-gray-700">
+                  <div className="mt-6 space-y-4 rounded-3xl border border-[#c73b6c]/15 bg-[#fdf0f4] p-6 text-gray-700">
                     {productsToCheckout.map((item) => (
                       <div key={item.id} className="rounded-3xl border border-pink-100 bg-white p-4">
                         <div className="flex items-start justify-between gap-4">
@@ -208,7 +208,7 @@ const Checkout = () => {
                         value={values.customerName}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+                        className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-[#c73b6c] focus:ring-2 focus:ring-[#c73b6c]/10"
                         placeholder="Sarah Smith"
                       />
                     </label>
@@ -221,7 +221,7 @@ const Checkout = () => {
                         value={values.phone}
                         onChange={handleChange}
                         required
-                        className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+                        className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-[#c73b6c] focus:ring-2 focus:ring-[#c73b6c]/10"
                         placeholder="+27 82 555 1234"
                       />
                     </label>
@@ -235,7 +235,7 @@ const Checkout = () => {
                       onChange={handleChange}
                       rows="4"
                       required
-                      className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+                      className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-[#c73b6c] focus:ring-2 focus:ring-[#c73b6c]/10"
                       placeholder="123 Main Road, Cape Town"
                     />
                   </label>
@@ -246,7 +246,7 @@ const Checkout = () => {
                       name="paymentMethod"
                       value={values.paymentMethod}
                       onChange={handleChange}
-                      className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-pink-500 focus:ring-2 focus:ring-pink-100"
+                      className="w-full rounded-3xl border border-gray-300 bg-gray-50 px-4 py-3 text-sm text-gray-900 outline-none transition focus:border-[#c73b6c] focus:ring-2 focus:ring-[#c73b6c]/10"
                     >
                       <option value="PayFast">PayFast</option>
                       <option value="Yoco">Yoco</option>

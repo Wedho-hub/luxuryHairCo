@@ -40,13 +40,13 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition hover:-translate-y-1 hover:shadow-2xl">
+    <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-2xl">
       {/* Image */}
       <div className="relative h-72 overflow-hidden">
         <img
           src={product.image}
           alt={`${product.name} — ${product.length}" ${product.color} ${product.tier}`}
-          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
 
         {/* Type badge — top-left */}
@@ -100,14 +100,14 @@ const ProductCard = ({ product }) => {
           <button
             type="button"
             onClick={handleAddToCart}
-            className="rounded-full border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-black transition hover:border-black hover:bg-gray-50"
+            className="rounded-full border border-gray-300 bg-white px-4 py-3 text-sm font-semibold text-black transition-[border-color,background-color,transform] hover:border-black hover:bg-gray-50 active:scale-95 select-none"
           >
             Add to cart
           </button>
           <button
             type="button"
             onClick={handleOrderNow}
-            className="rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-4 py-3 text-sm font-semibold text-black shadow-md shadow-[#d4af37]/20 transition hover:brightness-110"
+            className="rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-4 py-3 text-sm font-semibold text-black shadow-md shadow-[#d4af37]/20 transition-[filter,transform] hover:brightness-110 active:scale-95 select-none"
           >
             Order now
           </button>
@@ -116,7 +116,7 @@ const ProductCard = ({ product }) => {
 
       {/* Toast */}
       {toastVisible && (
-        <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-black px-4 py-2 text-xs font-semibold text-white shadow-lg">
+        <div className="pointer-events-none absolute left-1/2 top-4 z-20 -translate-x-1/2 whitespace-nowrap rounded-full bg-black px-4 py-2 text-xs font-semibold text-white shadow-lg animate-scale-in">
           {toastMessage}
         </div>
       )}
