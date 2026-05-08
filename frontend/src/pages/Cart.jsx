@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Seo from "../components/Seo";
 import { useCart } from "../context/CartContext";
 
@@ -10,8 +12,9 @@ const Cart = () => {
       <Seo
         title="Your Cart | Luxury Hair Co."
         description="Review the bundles in your cart before checking out securely with Luxury Hair Co. in Cape Town."
-        url="https://luxuryhairco.example.com/cart"
+        url="https://luxuryhairco.github.io/cart"
       />
+      <Header />
       <section className="bg-pink-50 py-14 px-6">
         <div className="mx-auto max-w-6xl">
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">
@@ -91,6 +94,12 @@ const Cart = () => {
                   <p className="mt-4 text-gray-700">
                     Add additional products to your cart and update quantities before you complete checkout.
                   </p>
+                  <Link
+                    to="/"
+                    className="mt-6 inline-flex rounded-full border border-gray-300 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition hover:bg-gray-50"
+                  >
+                    Continue shopping
+                  </Link>
                 </div>
 
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
@@ -106,7 +115,7 @@ const Cart = () => {
                   </div>
                   <Link
                     to="/checkout"
-                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-black px-6 py-4 text-sm font-semibold text-white transition hover:bg-gray-900"
+                    className="mt-6 inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#d4af37] via-[#f7d786] to-[#f8e3b2] px-6 py-4 text-sm font-semibold text-black shadow-lg shadow-[#d4af37]/20 transition hover:brightness-110"
                   >
                     Proceed to checkout
                   </Link>
@@ -123,6 +132,7 @@ const Cart = () => {
           )}
         </div>
       </section>
+      <Footer />
     </main>
   );
 };

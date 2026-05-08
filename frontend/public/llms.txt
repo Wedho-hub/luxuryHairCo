@@ -1,0 +1,87 @@
+# Luxury Hair Co.
+
+> Raw Vietnamese human hair in 5×5 Closures and Full Frontals — 10" to 30". Natural, Burgundy, Brown, Colour 33, and Two-Tone colourways. Same-day Cape Town delivery. R6,500 to R19,600.
+
+## About
+
+Luxury Hair Co. is a South African e-commerce store selling raw Vietnamese human hair — a Signature Collection of 19 styles. Based in Cape Town, South Africa. All hair is 100% raw Vietnamese, straight texture, with no synthetic blends. The business serves Cape Town with same-day delivery and ships nationwide via courier.
+
+## Product catalogue — Raw Vietnamese Hair Signature Collection
+
+### 10 Inch (5×5 Closure)
+| Style Name | Colourway | Part | Price |
+|---|---|---|---|
+| Black Desire | Natural | Middle Part | R6,500 |
+| Velvet Kiss | Burgundy | 3 Part | R7,000 |
+| Golden 33 | Colour 33 | 3 Part | R7,000 |
+
+### 16 Inch (5×5 Closure)
+| Style Name | Colourway | Part | Price |
+|---|---|---|---|
+| Black Obsession | Natural | Middle Part | R9,800 |
+| Scarlet Obsession | Burgundy | Middle Part | R10,500 |
+
+### 22 Inch
+| Style Name | Type | Colourway | Price |
+|---|---|---|---|
+| Shadow Seduction | 5×5 Closure | Two Tone · 3 Part | R12,600 |
+| Rubie Luxe | Full Frontal | Burgundy | R13,000 |
+| Chocolate Desire | Full Frontal | Brown | R13,000 |
+| Midnight Mocha | Full Frontal | Two Tone | R13,000 |
+
+### 26 Inch
+| Style Name | Type | Colourway | Price |
+|---|---|---|---|
+| Naomi Seduction | 5×5 Closure | Natural · 3 Part | R16,000 |
+| Ruby Silk | Full Frontal | Burgundy | R17,000 |
+| Zendaya Mocha Glow | Full Frontal | Brown | R17,000 |
+| Lori Luxe | Full Frontal | Two Tone | R17,000 |
+
+### 28 Inch
+| Style Name | Type | Colourway | Price |
+|---|---|---|---|
+| Onyx Silk | 5×5 Closure | Natural · Middle Part | R17,500 |
+| Ruby Obsession | Full Frontal | Burgundy | R18,400 |
+| Espresso Luxe | Full Frontal | Two-Tone | R18,400 |
+
+### 30 Inch (Full Frontal)
+| Style Name | Colourway | Price |
+|---|---|---|
+| Black Diamond Straight | Natural | R19,000 |
+| Midnight Mocha | Two-Tone | R19,600 |
+| Wine Velvet | Burgundy | R19,600 |
+
+## Colourways explained
+- **Natural** — jet-black, unprocessed Vietnamese hair
+- **Burgundy** — deep wine/ruby red
+- **Colour 33** — auburn/chestnut
+- **Brown** — warm chocolate/mocha brown
+- **Two Tone** — ombré from dark root to lighter ends
+
+## Types explained
+- **5×5 Closure** — 5×5 lace closure wig/piece; available in Middle Part or 3 Part
+- **Full Frontal** — 13×4 or 13×6 lace frontal for a natural hairline edge
+
+## Ordering
+
+Customers order through the website or directly on WhatsApp. The checkout collects delivery details and opens a pre-filled WhatsApp message for the team to confirm.
+
+## Payment methods
+- PayFast (card, EFT, instant EFT)
+- Yoco (card, tap-to-pay)
+- EFT / Direct bank transfer
+- Confirmation via WhatsApp
+
+## Delivery
+- Cape Town: same-day for orders placed before 1 PM
+- Nationwide South Africa: 2–3 business days via courier
+
+## Contact
+- WhatsApp: +27 82 555 1234
+- Email: info@luxuryhairco.co.za
+- Website: https://luxuryhairco.github.io
+
+## Social media
+- Instagram: https://instagram.com/luxuryhairco
+- TikTok: https://tiktok.com/@luxuryhairco
+- Facebook: https://facebook.com/luxuryhairco

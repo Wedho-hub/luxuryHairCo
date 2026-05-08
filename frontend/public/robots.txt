@@ -1,3 +1,37 @@
 User-agent: *
 Allow: /
-Sitemap: https://luxuryhairco.example.com/sitemap.xml
+Disallow: /order-success
+Disallow: /checkout
+Disallow: /cart
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
+# AI crawlers — allowed to index public content for training and search
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://luxuryhairco.github.io/sitemap.xml

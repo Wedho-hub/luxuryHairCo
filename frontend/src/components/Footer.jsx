@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer id="site-footer" className="border-t border-white/10 bg-[#070307] text-[#f6e8d3]">
@@ -122,9 +124,9 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/checkout" className="transition hover:text-white">
+              <Link to="/checkout" className="transition hover:text-white">
                 Checkout
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

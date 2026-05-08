@@ -1,9 +1,19 @@
-import { createContext, useContext, useMemo, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const CartContext = createContext(null);
 
 export const CartProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("luxuryHairCart")) || [];
+    } catch {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    localStorage.setItem("luxuryHairCart", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
   const cartTotal = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
@@ -36,6 +46,7 @@ export const CartProvider = ({ children }) => {
 
   const value = useMemo(
     () => ({ cartItems, cartCount, cartTotal, addToCart, removeFromCart, updateQuantity, clearCart }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [cartItems, cartCount, cartTotal]
   );
 
