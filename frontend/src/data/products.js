@@ -1,6 +1,12 @@
 // Raw Vietnamese Hair – Signature Collection
 // Images grouped by colour to keep visuals consistent across repeated colourways.
 
+import wig1 from "../assets/wig1.png";
+import wig1Back from "../assets/wig1backview.jpeg";
+import wig2Back from "../assets/wig2backview.jpeg";
+import wig3Back from "../assets/wig3backview.jpeg";
+import wig4Back from "../assets/wig4backview.jpeg";
+
 const img = {
   // Natural / jet-black straight
   naturalA: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80",
@@ -88,7 +94,19 @@ export const products = [
     length: 16,
     texture: "Straight",
     price: 10500,
-    image: img.burgundyB,
+    image: wig4Back,
+  },
+  {
+    id: 20,
+    name: "Mocha Obsession",
+    tier: "5×5 Closure",
+    color: "Brown",
+    part: "Middle Part",
+    description: "Brown · Middle Part",
+    length: 16,
+    texture: "Straight",
+    price: 10500,
+    image: wig3Back,
   },
 
   // ── 22 Inch ──────────────────────────────────────────────────────────────────
@@ -114,7 +132,7 @@ export const products = [
     length: 22,
     texture: "Straight",
     price: 13000,
-    image: img.burgundyC,
+    image: wig2Back,
   },
   {
     id: 8,
@@ -240,7 +258,7 @@ export const products = [
     length: 30,
     texture: "Straight",
     price: 19000,
-    image: img.naturalE,
+    image: wig1,
   },
   {
     id: 18,
