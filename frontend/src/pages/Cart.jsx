@@ -10,8 +10,8 @@ const Cart = () => {
   return (
     <main className="bg-white text-gray-900">
       <Seo
-        title="Your Cart | Luxury Hair Co."
-        description="Review the bundles in your cart before checking out securely with Luxury Hair Co. in Cape Town."
+        title="Your Cart | Silk Sculpture Hair"
+        description="Review the bundles in your cart before checking out securely with Silk Sculpture Hair in Cape Town."
         url="https://luxuryhairco.github.io/cart"
       />
       <Header />

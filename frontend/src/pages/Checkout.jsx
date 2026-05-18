@@ -88,7 +88,7 @@ const Checkout = () => {
       .join("\n");
 
     const waMessage = encodeURIComponent(
-      `Hi Luxury Hair Co.! I'd like to place an order:\n\n${itemsList}\n\nTotal: R${orderTotal}\n\nDelivery details:\nName: ${values.customerName}\nPhone: ${values.phone}\nAddress: ${values.address}\nPayment: ${values.paymentMethod}\nRef: #${localOrderId}`
+      `Hi! I'd like to place an order with Silk Sculpture Hair:\n\n${itemsList}\n\nTotal: R${orderTotal}\n\nDelivery details:\nName: ${values.customerName}\nPhone: ${values.phone}\nAddress: ${values.address}\nPayment: ${values.paymentMethod}\nRef: #${localOrderId}`
     );
 
     let finalOrder = localOrder;
@@ -122,8 +122,8 @@ const Checkout = () => {
   return (
     <main className="bg-white text-gray-900">
       <Seo
-        title="Checkout | Luxury Hair Co."
-        description="Complete your Luxury Hair Co. order with secure checkout and delivery details for premium hair bundles in Cape Town."
+        title="Checkout | Silk Sculpture Hair"
+        description="Complete your Silk Sculpture Hair order with secure checkout and delivery details for premium hair bundles in Cape Town."
         url="https://luxuryhairco.github.io/checkout"
       />
       <Header />

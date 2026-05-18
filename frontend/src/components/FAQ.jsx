@@ -12,7 +12,7 @@ const faqs = [
     id: 2,
     question: "Is this 100% human hair?",
     answer:
-      "Yes — every bundle sold by Luxury Hair Co. is made from 100% genuine human hair. No synthetic fibers, no blends. You can colour, heat-style, and treat it just like your natural hair.",
+      "Yes — every bundle sold by Silk Sculpture Hair is made from 100% genuine human hair. No synthetic fibers, no blends. You can colour, heat-style, and treat it just like your natural hair.",
   },
   {
     id: 3,
@@ -46,22 +46,22 @@ const FAQ = () => {
   const [listRef, listVisible] = useInView(0.05);
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-28 px-6 bg-[#faf8f5]">
       <div className="mx-auto max-w-3xl">
         <div
           ref={headerRef}
           className={`mb-14 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
         >
-          <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">FAQ</p>
-          <h2 className="mt-4 text-3xl font-bold text-black">Frequently asked questions</h2>
-          <p className="mx-auto mt-4 max-w-xl text-gray-600">
+          <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">FAQ</p>
+          <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">Frequently asked questions</h2>
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-8 text-gray-400">
             Everything you need to know before placing your order.
           </p>
         </div>
 
         <div
           ref={listRef}
-          className={`divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm ${
+          className={`divide-y divide-gray-50 overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-sm ${
             listVisible ? "animate-fade-up" : "opacity-0"
           }`}
           style={{ animationDelay: "150ms" }}

@@ -1,7 +1,7 @@
 const WHATSAPP_NUMBER = "27825551234";
 
 const WhatsAppButton = () => {
-  const message = encodeURIComponent("Hi Luxury Hair Co.! I'd like to place an order for hair bundles.");
+  const message = encodeURIComponent("Hi! I'd like to place an order with Silk Sculpture Hair.");
 
   return (
     <div className="fixed bottom-6 right-6 z-50">

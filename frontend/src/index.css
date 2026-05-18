@@ -19,4 +19,9 @@
   [role="button"] {
     touch-action: manipulation;
   }
+
+  ::selection {
+    background-color: rgba(212, 175, 55, 0.18);
+    color: inherit;
+  }
 }

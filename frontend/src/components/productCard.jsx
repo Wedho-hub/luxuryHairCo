@@ -42,7 +42,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-2xl">
       {/* Image */}
-      <div className="relative h-72 overflow-hidden">
+      <div className="relative h-[22rem] overflow-hidden">
         <img
           src={product.image}
           alt={`${product.name} — ${product.length}" ${product.color} ${product.tier}`}
@@ -80,7 +80,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Name */}
-        <h3 className="mt-3 text-xl font-bold text-black">{product.name}</h3>
+        <h3 className="mt-3 font-cormorant text-2xl font-medium italic text-black">{product.name}</h3>
 
         {/* Spec line */}
         <p className="mt-1 text-sm text-gray-500">

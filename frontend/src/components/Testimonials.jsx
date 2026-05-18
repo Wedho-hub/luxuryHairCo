@@ -16,7 +16,7 @@ const testimonials = [
     location: "Cape Town",
     rating: 5,
     feedback:
-      "Perfect texture and zero tangles. My clients love the finished look every single time. I order exclusively from Luxury Hair Co. now.",
+      "Perfect texture and zero tangles. My clients love the finished look every single time. I order exclusively from Silk Sculpture Hair now.",
     product: "Naomi Seduction — 26″ Natural",
   },
   {
@@ -31,12 +31,12 @@ const testimonials = [
 ];
 
 const Stars = ({ count }) => (
-  <div className="flex gap-0.5" aria-label={`${count} out of 5 stars`}>
+  <div className="flex gap-1" aria-label={`${count} out of 5 stars`}>
     {Array.from({ length: 5 }).map((_, i) => (
       <svg
         key={i}
         viewBox="0 0 20 20"
-        className={`h-4 w-4 ${i < count ? "text-[#d4af37]" : "text-gray-200"}`}
+        className={`h-3.5 w-3.5 ${i < count ? "text-[#d4af37]" : "text-gray-100"}`}
         fill="currentColor"
         aria-hidden="true"
       >
@@ -51,36 +51,45 @@ const Testimonials = () => {
   const [gridRef, gridVisible] = useInView(0.05);
 
   return (
-    <section className="py-20 px-6 bg-gray-50">
+    <section className="py-28 px-6 bg-white">
       <div className="mx-auto max-w-7xl">
         <div
           ref={headerRef}
-          className={`mb-14 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
+          className={`mb-20 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
         >
-          <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Reviews</p>
-          <h2 className="mt-4 text-3xl font-bold text-black">Trusted by customers across South Africa</h2>
-          <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-            Hear from shoppers who love the fit, feel, and fast delivery.
-          </p>
+          <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Client stories</p>
+          <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
+            Words from our clients
+          </h2>
         </div>
 
-        <div ref={gridRef} className="grid gap-6 md:grid-cols-3">
+        <div ref={gridRef} className="grid gap-8 md:grid-cols-3">
           {testimonials.map((testimonial, i) => (
             <div
               key={testimonial.id}
-              className={`flex flex-col rounded-3xl border border-gray-200 bg-white p-8 shadow-sm transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-md ${
+              className={`relative flex flex-col rounded-3xl border border-gray-100 bg-white p-10 shadow-sm transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-md ${
                 gridVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 110}ms` }}
             >
-              <Stars count={testimonial.rating} />
-              <p className="mt-5 flex-1 text-gray-700 leading-7">
-                &ldquo;{testimonial.feedback}&rdquo;
+              {/* Ornamental gold quote mark */}
+              <p
+                className="pointer-events-none absolute top-4 left-6 select-none font-cormorant text-[5.5rem] leading-none text-[#d4af37]/20"
+                aria-hidden="true"
+              >
+                &ldquo;
               </p>
-              <div className="mt-6 border-t border-gray-100 pt-6">
-                <p className="font-semibold text-black">{testimonial.name}</p>
-                <p className="mt-1 text-sm text-gray-500">
-                  {testimonial.location} &middot; {testimonial.product}
+
+              <Stars count={testimonial.rating} />
+
+              <p className="relative mt-7 flex-1 font-cormorant text-xl font-light italic leading-8 text-gray-700">
+                {testimonial.feedback}
+              </p>
+
+              <div className="mt-8 border-t border-gray-100 pt-7">
+                <p className="text-sm font-semibold text-black">{testimonial.name}</p>
+                <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-gray-400">
+                  {testimonial.location}&nbsp;&middot;&nbsp;{testimonial.product}
                 </p>
               </div>
             </div>

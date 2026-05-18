@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer id="site-footer" className="border-t border-white/10 bg-[#070307] text-[#f6e8d3]">
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-4">
-        <Link to="/" aria-label="Luxury Hair Co. — home">
+        <Link to="/" aria-label="Silk Sculpture Hair — home">
           <Logo />
         </Link>
         <div className="mt-1 h-px bg-white/10 mb-10" />

@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 
 const defaultMeta = {
-  title: "Luxury Hair Co. | Premium Hair Bundles in Cape Town",
+  title: "Silk Sculpture Hair | Premium Hair Bundles in Cape Town",
   description:
-    "Luxury Hair Co. offers premium hair bundles in Cape Town with fast delivery, secure checkout, and expert styling support.",
+    "Silk Sculpture Hair offers premium raw Vietnamese hair bundles in Cape Town with same-day delivery, secure checkout, and expert styling support.",
   keywords:
-    "hair bundles, luxury hair, Cape Town hair, premium hair extensions, hair bundles online, hair extensions South Africa",
-  author: "Luxury Hair Co.",
+    "silk sculpture hair, raw Vietnamese hair, Cape Town hair bundles, premium hair extensions, human hair South Africa, full frontal wig Cape Town",
+  author: "Silk Sculpture Hair",
   url: "https://luxuryhairco.example.com",
 };
 

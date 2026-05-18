@@ -12,6 +12,12 @@ import Footer from "../components/Footer";
 import { products } from "../data/products";
 import { useInView } from "../hooks/useInView";
 
+const discountItems = [
+  "Same-day Cape Town delivery on orders placed before 1 PM",
+  "Complimentary colourway advice with every purchase",
+  "20 styles from R6,500 to R19,600",
+];
+
 const Home = () => {
   const [productHeaderRef, productHeaderVisible] = useInView();
   const [gridRef, gridVisible] = useInView(0.04);
@@ -20,24 +26,28 @@ const Home = () => {
   return (
     <main className="bg-white text-gray-900">
       <Seo
-        title="Luxury Hair Co. | Premium Hair Bundles in Cape Town"
-        description="Shop premium hair bundles in Cape Town with fast delivery, secure checkout, and expert styling support."
-        url="https://luxuryhairco.example.com/"
+        title="Silk Sculpture Hair | Premium Hair Bundles in Cape Town"
+        description="Shop premium raw Vietnamese hair bundles in Cape Town. Same-day delivery, expert styling advice, and secure checkout."
+        url="https://luxuryhairco.github.io/"
       />
       <Header />
       <Hero />
       <Offer />
 
-      <section id="products" className="py-12 px-6">
+      {/* ── Products ── */}
+      <section id="products" className="py-28 px-6 bg-white">
         <div className="mx-auto max-w-7xl">
           <div
             ref={productHeaderRef}
-            className={`mb-10 text-center ${productHeaderVisible ? "animate-fade-up" : "opacity-0"}`}
+            className={`mb-14 text-center ${productHeaderVisible ? "animate-fade-up" : "opacity-0"}`}
           >
-            <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Raw Vietnamese Hair</p>
-            <h2 className="mt-4 text-3xl font-bold">Signature Collection — 10&Prime; to 30&Prime;</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-600">
-              Nineteen styles across 5×5 Closures and Full Frontals. Natural, Burgundy, Brown, Colour 33 and Two-Tone colourways — all 100% raw Vietnamese, straight texture.
+            <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Raw Vietnamese Hair</p>
+            <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
+              Signature Collection — 10&Prime; to 30&Prime;
+            </h2>
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-gray-400">
+              Twenty exquisite styles across 5×5 Closures and Full Frontals. Natural, Burgundy, Brown, Colour 33
+              and Two-Tone — all 100% raw Vietnamese, straight texture.
             </p>
           </div>
 
@@ -57,21 +67,28 @@ const Home = () => {
 
       <WhyUs />
 
-      <section id="discount" className="py-12 px-6 bg-gray-50">
+      {/* ── Discount / Lead form ── */}
+      <section id="discount" className="py-28 px-6 bg-[#faf8f5]">
         <div
           ref={discountRef}
-          className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center"
+          className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center"
         >
           <div className={discountVisible ? "animate-fade-up" : "opacity-0"}>
-            <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Exclusive offer</p>
-            <h2 className="mt-4 text-3xl font-bold">Get R50 off your first Signature Collection order</h2>
-            <p className="mt-4 max-w-xl text-gray-600">
-              Leave your name and WhatsApp number and our team will confirm your order, answer style questions, and send your payment link — fast.
+            <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Exclusive offer</p>
+            <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
+              Your first order,<br className="hidden sm:block" /> reimagined.
+            </h2>
+            <p className="mt-5 max-w-lg text-sm leading-8 text-gray-400">
+              Leave your details and our styling team will reach out on WhatsApp with your personal discount,
+              colourway guidance, and a payment link — all within minutes.
             </p>
-            <ul className="mt-6 space-y-3 text-gray-700">
-              <li>✅ Same-day response for Cape Town customers</li>
-              <li>✅ Free colourway advice with every order</li>
-              <li>✅ Styles from R6,500 — R19,600</li>
+            <ul className="mt-8 space-y-4">
+              {discountItems.map((item) => (
+                <li key={item} className="flex items-center gap-3 text-sm text-gray-500">
+                  <span className="h-[3px] w-[3px] shrink-0 rounded-full bg-[#d4af37]" aria-hidden="true" />
+                  {item}
+                </li>
+              ))}
             </ul>
           </div>
 

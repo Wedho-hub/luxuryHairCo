@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        cormorant: ["'Cormorant Garamond'", "Georgia", "serif"],
+      },
       keyframes: {
         "fade-up": {
           "0%":   { opacity: "0", transform: "translateY(28px)" },

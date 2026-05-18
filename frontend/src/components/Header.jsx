@@ -29,7 +29,7 @@ const Header = () => {
       >
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
           {/* Brand logo */}
-          <Link to="/" aria-label="Luxury Hair Co. — home">
+          <Link to="/" aria-label="Silk Sculpture Hair — home">
             <Logo />
           </Link>
 
