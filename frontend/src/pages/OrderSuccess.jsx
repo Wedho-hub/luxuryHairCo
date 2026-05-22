@@ -22,12 +22,12 @@ const OrderSuccess = () => {
   return (
     <main className="bg-white text-gray-900">
       <Seo
-        title="Order confirmed | Luxury Hair Co."
-        description="Your hair bundle order is confirmed. Luxury Hair Co. will process your delivery and payment details shortly."
+        title="Order confirmed | Silk Sculpture Hair"
+        description="Your hair bundle order is confirmed. Silk Sculpture Hair will process your delivery and payment details shortly."
         url="https://luxuryhairco.github.io/order-success"
       />
       <Header />
-      <section className="bg-pink-50 py-20 px-6">
+      <section className="bg-[#fdf0f4] py-20 px-6">
         <div className="mx-auto max-w-4xl rounded-3xl bg-white p-10 shadow-sm">
           <div className="text-center">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
@@ -35,15 +35,15 @@ const OrderSuccess = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
             </div>
-            <p className="mt-5 text-sm uppercase tracking-[0.28em] text-pink-500">Order confirmed</p>
-            <h1 className="mt-4 text-4xl font-bold">Thank you for your order.</h1>
+            <p className="mt-5 text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Order confirmed</p>
+            <h1 className="mt-4 font-cormorant text-4xl font-light italic sm:text-5xl">Thank you for your order.</h1>
             <p className="mt-4 text-gray-600">
               Check your WhatsApp — your order details have been sent to our team for confirmation.
             </p>
           </div>
 
           {!order ? (
-            <div className="mt-10 rounded-3xl border border-pink-200 bg-pink-50 p-8 text-center text-gray-700">
+            <div className="mt-10 rounded-3xl border border-[#c73b6c]/20 bg-[#fdf0f4] p-8 text-center text-gray-700">
               <p className="text-lg font-semibold">No order details found.</p>
               <p className="mt-3">Please return to the shop and choose a bundle to submit a new order.</p>
               <Link
@@ -80,8 +80,8 @@ const OrderSuccess = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 flex items-center justify-between rounded-3xl bg-pink-50 p-6">
-                  <p className="text-sm uppercase tracking-[0.28em] text-pink-500">Order total</p>
+                <div className="mt-6 flex items-center justify-between rounded-3xl bg-[#fdf0f4] p-6">
+                  <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Order total</p>
                   <p className="text-3xl font-semibold text-black">R{order.total}</p>
                 </div>
               </div>
