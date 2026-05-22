@@ -75,7 +75,7 @@ const Header = () => {
             </a>
 
             <a
-              href="https://instagram.com/luxuryhairco"
+              href="https://www.instagram.com/organic__sculpture_formulation?utm_source=qr"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -87,7 +87,7 @@ const Header = () => {
             </a>
 
             <a
-              href="https://pinterest.com/luxuryhairco"
+              href="https://pin.it/5nJceubri"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Pinterest"
@@ -111,7 +111,7 @@ const Header = () => {
             </a>
 
             <a
-              href="https://tiktok.com/@luxuryhairco"
+              href="https://www.tiktok.com/@organic_sculpture?_r=1&_t=ZS-96ZC4b4mt8f"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="TikTok"
