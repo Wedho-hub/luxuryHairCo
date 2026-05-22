@@ -40,13 +40,18 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-2xl">
+    <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow,border-color] duration-700 hover:-translate-y-2 hover:border-[#d4af37]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.10)]">
       {/* Image */}
       <div className="relative h-[22rem] overflow-hidden">
         <img
           src={product.image}
           alt={`${product.name} — ${product.length}" ${product.color} ${product.tier}`}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-[1.06]"
+        />
+        {/* Bottom scrim — fades in on hover */}
+        <div
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+          aria-hidden="true"
         />
 
         {/* Type badge — top-left */}
@@ -80,7 +85,7 @@ const ProductCard = ({ product }) => {
         </div>
 
         {/* Name */}
-        <h3 className="mt-3 font-cormorant text-2xl font-medium italic text-black">{product.name}</h3>
+        <h3 className="mt-3 font-cormorant text-2xl font-medium italic text-black transition-colors duration-500 group-hover:text-[#b8941f]">{product.name}</h3>
 
         {/* Spec line */}
         <p className="mt-1 text-sm text-gray-500">

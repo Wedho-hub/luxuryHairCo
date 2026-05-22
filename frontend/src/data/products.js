@@ -1,11 +1,17 @@
 // Raw Vietnamese Hair – Signature Collection
 // Images grouped by colour to keep visuals consistent across repeated colourways.
 
-import wig1 from "../assets/wig1.png";
-import wig1Back from "../assets/wig1backview.jpeg";
-import wig2Back from "../assets/wig2backview.jpeg";
-import wig3Back from "../assets/wig3backview.jpeg";
-import wig4Back from "../assets/wig4backview.jpeg";
+import chocolateDesireBrown22Img from "../assets/chocolateDesireBrown22.jpeg";
+
+import blackDesire10    from "../assets/blackDesrie10.jpeg";
+import velvetKiss10     from "../assets/velvetKiss10.jpeg";
+import golden3310       from "../assets/golden3310.jpeg";
+import blackObsession   from "../assets/blackObsession.jpeg";
+import scarletObs16     from "../assets/scarletObsession16.jpeg";
+import rubieLuxe22      from "../assets/rubieLuxe22.jpeg";
+import chocolateDesire  from "../assets/chocolateDesire22.jpeg";
+import naomiSeduction   from "../assets/naomiSeduction26.jpeg";
+import wineVelvet30     from "../assets/wineVelvet30.jpeg";
 
 const img = {
   // Natural / jet-black straight
@@ -44,7 +50,7 @@ export const products = [
     length: 10,
     texture: "Straight",
     price: 6500,
-    image: img.naturalA,
+    image: blackDesire10,
   },
   {
     id: 2,
@@ -56,7 +62,7 @@ export const products = [
     length: 10,
     texture: "Straight",
     price: 7000,
-    image: img.burgundyA,
+    image: velvetKiss10,
   },
   {
     id: 3,
@@ -68,7 +74,7 @@ export const products = [
     length: 10,
     texture: "Straight",
     price: 7000,
-    image: img.colour33,
+    image: golden3310,
   },
 
   // ── 16 Inch ──────────────────────────────────────────────────────────────────
@@ -82,7 +88,7 @@ export const products = [
     length: 16,
     texture: "Straight",
     price: 9800,
-    image: img.naturalB,
+    image: blackObsession,
   },
   {
     id: 5,
@@ -94,7 +100,7 @@ export const products = [
     length: 16,
     texture: "Straight",
     price: 10500,
-    image: wig4Back,
+    image: scarletObs16,
   },
   {
     id: 20,
@@ -106,7 +112,7 @@ export const products = [
     length: 16,
     texture: "Straight",
     price: 10500,
-    image: wig3Back,
+    image: chocolateDesireBrown22Img,
   },
 
   // ── 22 Inch ──────────────────────────────────────────────────────────────────
@@ -132,7 +138,7 @@ export const products = [
     length: 22,
     texture: "Straight",
     price: 13000,
-    image: wig2Back,
+    image: rubieLuxe22,
   },
   {
     id: 8,
@@ -144,7 +150,7 @@ export const products = [
     length: 22,
     texture: "Straight",
     price: 13000,
-    image: img.brownA,
+    image: chocolateDesire,
   },
   {
     id: 9,
@@ -170,7 +176,7 @@ export const products = [
     length: 26,
     texture: "Straight",
     price: 16000,
-    image: img.naturalD,
+    image: naomiSeduction,
   },
   {
     id: 11,
@@ -258,7 +264,7 @@ export const products = [
     length: 30,
     texture: "Straight",
     price: 19000,
-    image: wig1,
+    image: img.naturalE,
   },
   {
     id: 18,
@@ -282,6 +288,6 @@ export const products = [
     length: 30,
     texture: "Straight",
     price: 19600,
-    image: img.burgundyC,
+    image: wineVelvet30,
   },
 ];

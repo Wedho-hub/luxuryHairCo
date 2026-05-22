@@ -1,5 +1,4 @@
-const HERO_IMAGE =
-  "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1400&q=90";
+import heroImg from "../assets/chocolateDesireBrown22.jpeg";
 
 const Hero = () => (
   <section className="relative flex min-h-screen items-center overflow-hidden bg-[#070206]">
@@ -96,7 +95,7 @@ const Hero = () => (
         <div className="relative mx-auto max-w-xs lg:max-w-[400px]">
           <div className="absolute -inset-6 rounded-[3rem] bg-[#d4af37]/6 blur-3xl" aria-hidden="true" />
           <img
-            src={HERO_IMAGE}
+            src={heroImg}
             alt="Silk Sculpture Hair — Signature Collection"
             width={460}
             height={580}
