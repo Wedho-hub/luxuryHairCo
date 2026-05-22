@@ -8,7 +8,7 @@ const Hero = () => (
       aria-hidden="true"
     />
 
-    <div className="mx-auto w-full max-w-7xl px-6 py-28 lg:flex lg:items-center lg:justify-between lg:gap-20">
+    <div className="mx-auto w-full max-w-7xl px-6 py-14 sm:py-20 lg:flex lg:items-center lg:justify-between lg:gap-20 lg:py-28">
       {/* ── Copy ── */}
       <div className="max-w-xl text-center lg:text-left">
         <p className="animate-fade-in inline-flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.38em] text-[#d4af37]">
@@ -18,7 +18,7 @@ const Hero = () => (
         </p>
 
         <h1
-          className="animate-fade-up mt-8 font-cormorant text-6xl font-light italic leading-[1.07] text-white sm:text-7xl lg:text-[5.5rem]"
+          className="animate-fade-up mt-8 font-cormorant text-5xl font-light italic leading-[1.07] text-white sm:text-6xl lg:text-7xl xl:text-[5.5rem]"
           style={{ animationDelay: "120ms" }}
         >
           The Art of<br />Perfect Hair.
@@ -87,9 +87,9 @@ const Hero = () => (
         </div>
       </div>
 
-      {/* ── Hero image ── */}
+      {/* ── Hero image — desktop only ── */}
       <div
-        className="animate-slide-in-r mt-16 shrink-0 lg:mt-0"
+        className="hidden lg:block animate-slide-in-r shrink-0"
         style={{ animationDelay: "200ms" }}
       >
         <div className="relative mx-auto max-w-xs lg:max-w-[400px]">

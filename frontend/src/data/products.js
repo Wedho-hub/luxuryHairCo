@@ -51,6 +51,7 @@ export const products = [
     texture: "Straight",
     price: 6500,
     image: blackDesire10,
+    featured: true,
   },
   {
     id: 2,
@@ -63,6 +64,7 @@ export const products = [
     texture: "Straight",
     price: 7000,
     image: velvetKiss10,
+    featured: true,
   },
   {
     id: 3,
@@ -75,6 +77,7 @@ export const products = [
     texture: "Straight",
     price: 7000,
     image: golden3310,
+    featured: true,
   },
 
   // ── 16 Inch ──────────────────────────────────────────────────────────────────
@@ -89,6 +92,7 @@ export const products = [
     texture: "Straight",
     price: 9800,
     image: blackObsession,
+    featured: true,
   },
   {
     id: 5,
@@ -101,6 +105,7 @@ export const products = [
     texture: "Straight",
     price: 10500,
     image: scarletObs16,
+    featured: true,
   },
   {
     id: 20,
@@ -113,6 +118,7 @@ export const products = [
     texture: "Straight",
     price: 10500,
     image: chocolateDesireBrown22Img,
+    featured: true,
   },
 
   // ── 22 Inch ──────────────────────────────────────────────────────────────────
@@ -139,6 +145,7 @@ export const products = [
     texture: "Straight",
     price: 13000,
     image: rubieLuxe22,
+    featured: true,
   },
   {
     id: 8,
@@ -151,6 +158,7 @@ export const products = [
     texture: "Straight",
     price: 13000,
     image: chocolateDesire,
+    featured: true,
   },
   {
     id: 9,
@@ -177,6 +185,7 @@ export const products = [
     texture: "Straight",
     price: 16000,
     image: naomiSeduction,
+    featured: true,
   },
   {
     id: 11,
@@ -289,5 +298,6 @@ export const products = [
     texture: "Straight",
     price: 19600,
     image: wineVelvet30,
+    featured: true,
   },
 ];

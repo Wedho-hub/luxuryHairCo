@@ -28,7 +28,7 @@ const OrderSuccess = () => {
       />
       <Header />
       <section className="bg-[#fdf0f4] py-20 px-6">
-        <div className="mx-auto max-w-4xl rounded-3xl bg-white p-10 shadow-sm">
+        <div className="mx-auto max-w-4xl rounded-3xl bg-white p-6 shadow-sm sm:p-10">
           <div className="text-center">
             <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-100">
               <svg viewBox="0 0 24 24" className="h-8 w-8 text-green-600" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true">

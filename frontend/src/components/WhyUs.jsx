@@ -71,7 +71,7 @@ const WhyUs = () => {
           {features.map((feature, i) => (
             <div
               key={feature.title}
-              className={`group bg-[#070206] p-10 transition-colors hover:bg-[#0c080f] ${
+              className={`group bg-[#070206] p-6 sm:p-8 lg:p-10 transition-colors hover:bg-[#0c080f] ${
                 gridVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 100}ms` }}

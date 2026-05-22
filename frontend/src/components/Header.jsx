@@ -27,17 +27,17 @@ const Header = () => {
           isFooterVisible ? "opacity-30 scale-[0.99]" : "opacity-100"
         }`}
       >
-        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:justify-between">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
           {/* Brand logo */}
           <Link to="/" aria-label="Silk Sculpture Hair — home">
             <Logo />
           </Link>
 
-          {/* Nav + actions */}
-          <div className="flex flex-wrap items-center gap-4">
+          {/* Nav + actions — always a single row */}
+          <div className="flex items-center gap-3">
             <Link
               to="/"
-              className="text-sm font-semibold uppercase tracking-[0.12em] text-white/80 transition hover:text-[#f3ddb2] active:opacity-70 select-none"
+              className="hidden sm:inline text-sm font-semibold uppercase tracking-[0.12em] text-white/80 transition hover:text-[#f3ddb2] active:opacity-70 select-none"
             >
               Shop
             </Link>
@@ -60,8 +60,8 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Social icons */}
-          <nav aria-label="Social media" className="flex flex-wrap items-center justify-center gap-3 md:justify-end">
+          {/* Social icons — desktop only */}
+          <nav aria-label="Social media" className="hidden lg:flex items-center gap-3">
             <a
               href="https://facebook.com/luxuryhairco"
               target="_blank"
@@ -124,7 +124,7 @@ const Header = () => {
           </nav>
         </div>
       </header>
-      <div className="h-28 md:h-24" />
+      <div className="h-24" />
     </>
   );
 };

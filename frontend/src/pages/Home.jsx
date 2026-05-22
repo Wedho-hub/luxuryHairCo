@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Header from "../components/Header";
 import Seo from "../components/Seo";
 import Hero from "../components/Hero";
@@ -19,9 +20,13 @@ const discountItems = [
 ];
 
 const Home = () => {
+  const [showMore, setShowMore] = useState(false);
   const [productHeaderRef, productHeaderVisible] = useInView();
   const [gridRef, gridVisible] = useInView(0.04);
   const [discountRef, discountVisible] = useInView(0.1);
+
+  const featured = products.filter((p) => p.featured);
+  const extended = products.filter((p) => !p.featured);
 
   return (
     <main className="bg-white text-gray-900">
@@ -52,7 +57,7 @@ const Home = () => {
           </div>
 
           <div ref={gridRef} className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {products.map((product, i) => (
+            {featured.map((product, i) => (
               <div
                 key={product.id}
                 className={gridVisible ? "animate-fade-up" : "opacity-0"}
@@ -61,6 +66,32 @@ const Home = () => {
                 <ProductCard product={product} />
               </div>
             ))}
+          </div>
+
+          {showMore && (
+            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {extended.map((product, i) => (
+                <div
+                  key={product.id}
+                  className="animate-fade-up"
+                  style={{ animationDelay: `${i * 55}ms` }}
+                >
+                  <ProductCard product={product} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div className="mt-14 text-center">
+            <button
+              type="button"
+              onClick={() => setShowMore((v) => !v)}
+              className="group inline-flex items-center gap-4 font-cormorant text-xl font-light italic text-gray-400 transition-colors duration-300 hover:text-gray-900"
+            >
+              <span className="h-px w-10 bg-current transition-all duration-500 group-hover:w-14" aria-hidden="true" />
+              {showMore ? "Show fewer styles" : "See all 20 styles"}
+              <span className="h-px w-10 bg-current transition-all duration-500 group-hover:w-14" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </section>
