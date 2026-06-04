@@ -67,14 +67,14 @@ const Testimonials = () => {
           {testimonials.map((testimonial, i) => (
             <div
               key={testimonial.id}
-              className={`relative flex flex-col rounded-3xl border border-gray-100 bg-white p-10 shadow-sm transition-[transform,box-shadow] hover:-translate-y-0.5 hover:shadow-md ${
+              className={`group relative flex flex-col rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition-[transform,box-shadow,border-color] duration-500 hover:-translate-y-2 hover:border-[#d4af37]/25 hover:shadow-[0_20px_50px_rgba(0,0,0,0.08)] sm:p-10 ${
                 gridVisible ? "animate-fade-up" : "opacity-0"
               }`}
               style={{ animationDelay: `${i * 110}ms` }}
             >
               {/* Ornamental gold quote mark */}
               <p
-                className="pointer-events-none absolute top-4 left-6 select-none font-cormorant text-[5.5rem] leading-none text-[#d4af37]/20"
+                className="pointer-events-none absolute top-4 left-6 select-none font-cormorant text-[5.5rem] leading-none text-[#d4af37]/20 transition-colors duration-500 group-hover:text-[#d4af37]/40"
                 aria-hidden="true"
               >
                 &ldquo;

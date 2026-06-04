@@ -76,8 +76,10 @@ const WhyUs = () => {
               }`}
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              <div className="text-[#d4af37]">{feature.icon}</div>
-              <div className="mt-3 h-px w-6 bg-[#d4af37]/25" aria-hidden="true" />
+              <div className="text-[#d4af37] transition-transform duration-300 group-hover:-translate-y-1.5">
+                {feature.icon}
+              </div>
+              <div className="mt-3 h-px w-6 bg-[#d4af37]/25 transition-all duration-500 group-hover:w-10 group-hover:bg-[#d4af37]/50" aria-hidden="true" />
               <h3 className="mt-7 font-cormorant text-xl font-medium italic text-white">{feature.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#5c4e43]">{feature.description}</p>
             </div>

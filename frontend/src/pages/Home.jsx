@@ -47,7 +47,7 @@ const Home = () => {
             className={`mb-14 text-center ${productHeaderVisible ? "animate-fade-up" : "opacity-0"}`}
           >
             <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Raw Vietnamese Hair</p>
-            <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
+            <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl animate-fade-up-slow" style={{ animationDelay: "80ms" }}>
               Signature Collection — 10&Prime; to 30&Prime;
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-gray-400">
