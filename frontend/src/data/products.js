@@ -4,7 +4,6 @@
 import chocolateDesireBrown22Img from "../assets/chocolateDesireBrown22.jpeg";
 
 import blackDesire10    from "../assets/blackDesrie10.jpeg";
-import velvetKiss10     from "../assets/velvetKiss10.jpeg";
 import golden3310       from "../assets/golden3310.jpeg";
 import blackObsession   from "../assets/blackObsession.jpeg";
 import scarletObs16     from "../assets/scarletObsession16.jpeg";
@@ -63,7 +62,7 @@ export const products = [
     length: 10,
     texture: "Straight",
     price: 7000,
-    image: velvetKiss10,
+    image: rubieLuxe22,
     featured: true,
   },
   {
