@@ -67,7 +67,7 @@ const ProductCard = ({ product }) => {
 
         {/* Length badge — top-right */}
         <span className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-black shadow backdrop-blur-sm">
-          {product.length}&Prime;
+          {product.length} inch
         </span>
       </div>
 

@@ -10,7 +10,7 @@ const slides = [
     image: img1,
     eyebrow: "Raw Vietnamese Hair · Cape Town",
     heading: ["The Art of", "Perfect Hair."],
-    sub: "Twenty silhouettes of pure luxury — 5×5 Closures & Full Frontals, 10″ to 30″, in four exquisite colourways.",
+    sub: "Twenty silhouettes of pure luxury — 5×5 Closures & Full Frontals, 10 inch to 30 inch, in four exquisite colourways.",
     ctaLabel: "Explore the Collection",
     objectPos: "object-[50%_25%]",
   },
@@ -24,7 +24,7 @@ const slides = [
   },
   {
     image: img3,
-    eyebrow: "10″ to 30″ · Natural · Burgundy · Brown",
+    eyebrow: "10 to 30 inch · Natural · Burgundy · Brown",
     heading: ["Your Length.", "Your Moment."],
     sub: "Same-day Cape Town delivery on orders before 1 PM. Nationwide courier for all other areas.",
     ctaLabel: "Find Your Style",
@@ -183,7 +183,7 @@ const Hero = () => {
           <div className="mt-10 grid grid-cols-3 gap-4 border-t border-white/8 pt-7 sm:max-w-sm">
             {[
               { value: "20",    label: "Styles" },
-              { value: "30″",   label: "Max Length" },
+              { value: "30",    label: "inch max" },
               { value: "100%",  label: "Human Hair" },
             ].map(({ value, label }) => (
               <div key={label}>

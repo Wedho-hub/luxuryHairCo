@@ -48,7 +48,7 @@ const Home = () => {
           >
             <p className="text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Raw Vietnamese Hair</p>
             <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl animate-fade-up-slow" style={{ animationDelay: "80ms" }}>
-              Signature Collection — 10&Prime; to 30&Prime;
+              Signature Collection — 10 inch to 30 inch
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-gray-600">
               Twenty exquisite styles across 5×5 Closures and Full Frontals. Natural, Burgundy, Brown, Colour 33

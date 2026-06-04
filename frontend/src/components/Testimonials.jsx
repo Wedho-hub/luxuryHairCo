@@ -8,7 +8,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "The hair stayed soft even after two washes and the delivery was unbelievably fast. I'm absolutely obsessed — this is the best quality I've found in Cape Town.",
-    product: "Black Desire — 10″ Natural",
+    product: "Black Desire — 10 inch Natural",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "Perfect texture and zero tangles. My clients love the finished look every single time. I order exclusively from Silk Sculpture Hair now.",
-    product: "Naomi Seduction — 26″ Natural",
+    product: "Naomi Seduction — 26 inch Natural",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const testimonials = [
     rating: 5,
     feedback:
       "Incredible service, fast WhatsApp support, and the bundle quality is genuinely premium. Even with delivery to JHB, my order arrived in two days. Highly recommend.",
-    product: "Black Diamond Straight — 30″",
+    product: "Black Diamond Straight — 30 inch",
   },
 ];
 
