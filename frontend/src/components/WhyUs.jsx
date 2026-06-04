@@ -54,11 +54,11 @@ const WhyUs = () => {
           ref={headerRef}
           className={`mb-20 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
         >
-          <p className="text-[10px] uppercase tracking-[0.38em] text-[#d4af37]">Why choose us</p>
+          <p className="text-[11px] uppercase tracking-[0.38em] text-[#d4af37]">Why choose us</p>
           <h2 className="mt-5 font-cormorant text-5xl font-light italic text-white sm:text-6xl">
             The Silk Sculpture<br className="hidden sm:block" /> difference
           </h2>
-          <p className="mx-auto mt-5 max-w-lg text-sm leading-8 text-[#5c4e43]">
+          <p className="mx-auto mt-5 max-w-lg text-sm leading-8 text-[#9e8e80]">
             Premium craftsmanship, swift delivery, and expert guidance — refined for the discerning client.
           </p>
         </div>
@@ -81,7 +81,7 @@ const WhyUs = () => {
               </div>
               <div className="mt-3 h-px w-6 bg-[#d4af37]/25 transition-all duration-500 group-hover:w-10 group-hover:bg-[#d4af37]/50" aria-hidden="true" />
               <h3 className="mt-7 font-cormorant text-xl font-medium italic text-white">{feature.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-[#5c4e43]">{feature.description}</p>
+              <p className="mt-3 text-sm leading-7 text-[#9e8e80]">{feature.description}</p>
             </div>
           ))}
         </div>

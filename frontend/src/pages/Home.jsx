@@ -46,11 +46,11 @@ const Home = () => {
             ref={productHeaderRef}
             className={`mb-14 text-center ${productHeaderVisible ? "animate-fade-up" : "opacity-0"}`}
           >
-            <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Raw Vietnamese Hair</p>
+            <p className="text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Raw Vietnamese Hair</p>
             <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl animate-fade-up-slow" style={{ animationDelay: "80ms" }}>
               Signature Collection — 10&Prime; to 30&Prime;
             </h2>
-            <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-gray-400">
+            <p className="mx-auto mt-5 max-w-2xl text-sm leading-8 text-gray-600">
               Twenty exquisite styles across 5×5 Closures and Full Frontals. Natural, Burgundy, Brown, Colour 33
               and Two-Tone — all 100% raw Vietnamese, straight texture.
             </p>
@@ -86,7 +86,7 @@ const Home = () => {
             <button
               type="button"
               onClick={() => setShowMore((v) => !v)}
-              className="group inline-flex items-center gap-4 font-cormorant text-xl font-light italic text-gray-400 transition-colors duration-300 hover:text-gray-900"
+              className="group inline-flex items-center gap-4 font-cormorant text-xl font-light italic text-gray-500 transition-colors duration-300 hover:text-gray-900"
             >
               <span className="h-px w-10 bg-current transition-all duration-500 group-hover:w-14" aria-hidden="true" />
               {showMore ? "Show fewer styles" : "See all 20 styles"}
@@ -105,17 +105,17 @@ const Home = () => {
           className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.2fr_0.8fr] lg:items-center"
         >
           <div className={discountVisible ? "animate-fade-up" : "opacity-0"}>
-            <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Exclusive offer</p>
+            <p className="text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Exclusive offer</p>
             <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
               Your first order,<br className="hidden sm:block" /> reimagined.
             </h2>
-            <p className="mt-5 max-w-lg text-sm leading-8 text-gray-400">
+            <p className="mt-5 max-w-lg text-sm leading-8 text-gray-600">
               Leave your details and our styling team will reach out on WhatsApp with your personal discount,
               colourway guidance, and a payment link — all within minutes.
             </p>
             <ul className="mt-8 space-y-4">
               {discountItems.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-gray-500">
+                <li key={item} className="flex items-center gap-3 text-sm text-gray-700">
                   <span className="h-[3px] w-[3px] shrink-0 rounded-full bg-[#d4af37]" aria-hidden="true" />
                   {item}
                 </li>

@@ -20,7 +20,7 @@ const Cart = () => {
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Your cart</p>
+                <p className="text-xs uppercase tracking-[0.28em] text-[#c73b6c]">Your cart</p>
                 <h1 className="mt-4 text-3xl font-bold">Review your selected bundles</h1>
                 <p className="mt-3 max-w-2xl text-gray-600">
                   Add more bundles or proceed to checkout once you're ready.
@@ -51,7 +51,7 @@ const Cart = () => {
                   {cartItems.map((item) => (
                     <div key={item.id} className="flex flex-col gap-5 p-6 sm:flex-row sm:items-center sm:justify-between">
                       <div>
-                        <p className="text-sm uppercase tracking-[0.28em] text-gray-500">{item.tier}</p>
+                        <p className="text-xs uppercase tracking-[0.28em] text-gray-700">{item.tier}</p>
                         <h2 className="mt-2 text-xl font-semibold text-black">{item.name}</h2>
                         <p className="mt-2 text-sm text-gray-600">{item.description}</p>
                       </div>
@@ -90,7 +90,7 @@ const Cart = () => {
 
               <div className="grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Need more bundles?</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Need more bundles?</p>
                   <p className="mt-4 text-gray-700">
                     Add additional products to your cart and update quantities before you complete checkout.
                   </p>
@@ -103,7 +103,7 @@ const Cart = () => {
                 </div>
 
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Ready to buy</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Ready to buy</p>
                   <p className="mt-4 text-gray-700">Total includes all selected bundles.</p>
                   <div className="mt-6 space-y-3 text-sm text-gray-600">
                     <p>

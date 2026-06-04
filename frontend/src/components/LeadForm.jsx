@@ -48,7 +48,7 @@ const LeadForm = () => {
     >
       <div>
         <label
-          className="mb-2.5 block text-[10px] font-medium uppercase tracking-[0.28em] text-[#5c4e43]"
+          className="mb-2.5 block text-xs font-medium uppercase tracking-[0.28em] text-[#c9bba0]"
           htmlFor="lead-name"
         >
           Your Name
@@ -65,7 +65,7 @@ const LeadForm = () => {
 
       <div>
         <label
-          className="mb-2.5 block text-[10px] font-medium uppercase tracking-[0.28em] text-[#5c4e43]"
+          className="mb-2.5 block text-xs font-medium uppercase tracking-[0.28em] text-[#c9bba0]"
           htmlFor="lead-phone"
         >
           WhatsApp Number
@@ -96,7 +96,7 @@ const LeadForm = () => {
         )}
       </button>
 
-      <p className="text-center text-[10px] uppercase tracking-[0.2em] text-[#2e2520]">
+      <p className="text-center text-xs uppercase tracking-[0.2em] text-[#6a5e54]">
         WhatsApp only · No spam, ever.
       </p>
 

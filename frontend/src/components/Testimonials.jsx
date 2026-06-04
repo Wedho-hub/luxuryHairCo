@@ -57,7 +57,7 @@ const Testimonials = () => {
           ref={headerRef}
           className={`mb-20 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
         >
-          <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Client stories</p>
+          <p className="text-[11px] uppercase tracking-[0.38em] text-[#c73b6c]">Client stories</p>
           <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">
             Words from our clients
           </h2>
@@ -88,7 +88,7 @@ const Testimonials = () => {
 
               <div className="mt-8 border-t border-gray-100 pt-7">
                 <p className="text-sm font-semibold text-black">{testimonial.name}</p>
-                <p className="mt-1 text-[10px] uppercase tracking-[0.22em] text-gray-400">
+                <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-gray-500">
                   {testimonial.location}&nbsp;&middot;&nbsp;{testimonial.product}
                 </p>
               </div>

@@ -79,7 +79,7 @@ const ProductCard = ({ product }) => {
             className={`h-3 w-3 rounded-full ${COLOR_DOT[product.color] ?? "bg-gray-400"}`}
             aria-hidden="true"
           />
-          <span className="text-xs font-medium uppercase tracking-[0.2em] text-gray-500">
+          <span className="text-xs font-medium uppercase tracking-[0.2em] text-gray-600">
             {product.color}{product.part ? ` · ${product.part}` : ""}
           </span>
         </div>
@@ -88,13 +88,13 @@ const ProductCard = ({ product }) => {
         <h3 className="mt-3 font-cormorant text-2xl font-medium italic text-black transition-colors duration-500 group-hover:text-[#b8941f]">{product.name}</h3>
 
         {/* Spec line */}
-        <p className="mt-1 text-sm text-gray-500">
+        <p className="mt-1 text-sm text-gray-600">
           Raw Vietnamese · {product.texture}
         </p>
 
         {/* Price */}
         <div className="mt-auto pt-5 flex items-baseline gap-1">
-          <span className="text-sm font-medium text-gray-500">R</span>
+          <span className="text-sm font-medium text-gray-600">R</span>
           <span className="text-3xl font-bold tracking-tight text-black">
             {product.price.toLocaleString("en-ZA")}
           </span>

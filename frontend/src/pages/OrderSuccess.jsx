@@ -35,7 +35,7 @@ const OrderSuccess = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
               </svg>
             </div>
-            <p className="mt-5 text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Order confirmed</p>
+            <p className="mt-5 text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Order confirmed</p>
             <h1 className="mt-4 font-cormorant text-4xl font-light italic sm:text-5xl">Thank you for your order.</h1>
             <p className="mt-4 text-gray-600">
               Check your WhatsApp — your order details have been sent to our team for confirmation.
@@ -58,7 +58,7 @@ const OrderSuccess = () => {
               <div className="rounded-3xl border border-gray-200 bg-gray-50 p-8">
                 <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                   <div>
-                    <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Order reference</p>
+                    <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Order reference</p>
                     <p className="mt-2 text-2xl font-semibold text-black">#{orderId}</p>
                   </div>
                   <div className="rounded-2xl bg-green-50 px-4 py-2 text-sm font-semibold text-green-700">
@@ -72,7 +72,7 @@ const OrderSuccess = () => {
                       <div className="flex items-center justify-between gap-4">
                         <div>
                           <p className="font-semibold text-black">{item.productName}</p>
-                          <p className="mt-1 text-sm text-gray-500">Qty: {item.quantity}</p>
+                          <p className="mt-1 text-sm text-gray-600">Qty: {item.quantity}</p>
                         </div>
                         <p className="font-semibold text-black">R{item.price * item.quantity}</p>
                       </div>
@@ -81,21 +81,21 @@ const OrderSuccess = () => {
                 </div>
 
                 <div className="mt-6 flex items-center justify-between rounded-3xl bg-[#fdf0f4] p-6">
-                  <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Order total</p>
+                  <p className="text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Order total</p>
                   <p className="text-3xl font-semibold text-black">R{order.total}</p>
                 </div>
               </div>
 
               <div className="grid gap-6 md:grid-cols-2">
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Delivery to</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Delivery to</p>
                   <p className="mt-3 font-semibold text-black">{order.customerName}</p>
                   <p className="mt-1 text-sm text-gray-600">{order.phone}</p>
                   <p className="mt-2 text-sm text-gray-600 leading-6">{order.address}</p>
                 </div>
 
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Payment</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Payment</p>
                   <p className="mt-3 font-semibold text-black">{paymentMethod || "PayFast"}</p>
                   <div className="mt-4 rounded-2xl bg-yellow-50 px-4 py-3">
                     <p className="text-sm font-semibold text-yellow-800">Pending confirmation</p>

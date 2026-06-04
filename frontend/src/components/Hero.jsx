@@ -113,7 +113,7 @@ const Hero = () => {
 
             {/* Eyebrow */}
             <p
-              className="animate-fade-in inline-flex items-center gap-3 text-[10px] font-medium uppercase tracking-[0.38em] text-[#d4af37]"
+              className="animate-fade-in inline-flex items-center gap-3 text-[11px] font-medium uppercase tracking-[0.34em] text-[#d4af37]"
               style={{ animationDelay: "60ms" }}
             >
               <span className="h-px w-6 bg-[#d4af37]/50" aria-hidden="true" />
@@ -190,7 +190,7 @@ const Hero = () => {
                 <p className="font-cormorant text-3xl font-light italic text-[#d4af37] sm:text-4xl">
                   {value}
                 </p>
-                <p className="mt-1 text-[9px] uppercase tracking-[0.3em] text-[#4a3e34]">{label}</p>
+                <p className="mt-1 text-[11px] uppercase tracking-[0.28em] text-[#6a5e54]">{label}</p>
               </div>
             ))}
           </div>

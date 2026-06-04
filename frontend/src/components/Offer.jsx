@@ -14,13 +14,13 @@ const Offer = () => {
           <div className={visible ? "animate-fade-up" : "opacity-0"}>
             <div className="flex items-center justify-center gap-3 md:justify-start">
               <span className="h-px w-8 bg-[#c73b6c]/40" aria-hidden="true" />
-              <span className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">Limited time</span>
+              <span className="text-[11px] uppercase tracking-[0.38em] text-[#c73b6c]">Limited time</span>
               <span className="h-px w-8 bg-[#c73b6c]/40" aria-hidden="true" />
             </div>
             <h2 className="mt-5 font-cormorant text-5xl font-light italic text-white sm:text-6xl">
               R50 off your<br />first order.
             </h2>
-            <p className="mt-4 max-w-sm text-sm leading-8 text-[#5c4e43]">
+            <p className="mt-4 max-w-sm text-sm leading-8 text-[#9e8e80]">
               Premium hair, delivered same day across Cape Town. Stock is limited — secure your price today.
             </p>
           </div>

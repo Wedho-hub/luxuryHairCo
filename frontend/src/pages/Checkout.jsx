@@ -132,7 +132,7 @@ const Checkout = () => {
           <div className="mb-8 rounded-3xl bg-white p-8 shadow-sm md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="text-sm uppercase tracking-[0.28em] text-[#c73b6c]">Secure checkout</p>
+                <p className="text-xs uppercase tracking-[0.28em] text-[#c73b6c]">Secure checkout</p>
                 <h1 className="mt-4 text-3xl font-bold">Complete your luxury bundle order</h1>
                 <p className="mt-3 max-w-2xl text-gray-600">
                   Fill in your delivery details and we'll confirm your order on WhatsApp within minutes.
@@ -168,7 +168,7 @@ const Checkout = () => {
                       <div key={item.id} className="rounded-3xl border border-pink-100 bg-white p-4">
                         <div className="flex items-start justify-between gap-4">
                           <div>
-                            <p className="text-sm uppercase tracking-[0.28em] text-gray-500">{item.tier}</p>
+                            <p className="text-xs uppercase tracking-[0.28em] text-gray-700">{item.tier}</p>
                             <p className="mt-2 text-lg font-semibold text-black">{item.name}</p>
                             <p className="mt-1 text-sm text-gray-600">{item.description}</p>
                           </div>
@@ -192,7 +192,7 @@ const Checkout = () => {
                     ))}
                   </div>
                   <div className="mt-6 rounded-3xl bg-white p-6 shadow-sm">
-                    <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Total</p>
+                    <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Total</p>
                     <p className="mt-2 text-3xl font-semibold text-black">R{orderTotal}</p>
                   </div>
                 </div>
@@ -304,21 +304,21 @@ const Checkout = () => {
                 </div>
 
                 <div className="rounded-3xl border border-gray-200 bg-white p-8 shadow-sm">
-                  <p className="text-sm uppercase tracking-[0.28em] text-gray-500">Payment options</p>
+                  <p className="text-xs uppercase tracking-[0.28em] text-gray-700">Payment options</p>
                   <div className="mt-5 space-y-3 text-sm text-gray-600">
                     <div className="flex items-center gap-3 rounded-2xl bg-gray-50 p-3">
                       <span className="font-semibold text-black">PayFast</span>
-                      <span className="text-gray-400">—</span>
+                      <span className="text-gray-500">—</span>
                       <span>Secure card & EFT</span>
                     </div>
                     <div className="flex items-center gap-3 rounded-2xl bg-gray-50 p-3">
                       <span className="font-semibold text-black">Yoco</span>
-                      <span className="text-gray-400">—</span>
+                      <span className="text-gray-500">—</span>
                       <span>Card & tap-to-pay</span>
                     </div>
                     <div className="flex items-center gap-3 rounded-2xl bg-gray-50 p-3">
                       <span className="font-semibold text-black">EFT</span>
-                      <span className="text-gray-400">—</span>
+                      <span className="text-gray-500">—</span>
                       <span>Direct bank transfer</span>
                     </div>
                   </div>

@@ -52,9 +52,9 @@ const FAQ = () => {
           ref={headerRef}
           className={`mb-14 text-center ${headerVisible ? "animate-fade-up" : "opacity-0"}`}
         >
-          <p className="text-[10px] uppercase tracking-[0.38em] text-[#c73b6c]">FAQ</p>
+          <p className="text-[11px] uppercase tracking-[0.38em] text-[#c73b6c]">FAQ</p>
           <h2 className="mt-5 font-cormorant text-5xl font-light italic text-black sm:text-6xl">Frequently asked questions</h2>
-          <p className="mx-auto mt-5 max-w-xl text-sm leading-8 text-gray-400">
+          <p className="mx-auto mt-5 max-w-xl text-sm leading-8 text-gray-600">
             Everything you need to know before placing your order.
           </p>
         </div>
