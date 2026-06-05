@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import img1 from "../assets/chocolateDesireBrown22.jpeg";
-import img2 from "../assets/wineVelvet30.jpeg";
+import img2 from "../assets/rubieLuxe22.jpeg";
 import img3 from "../assets/naomiSeduction26.jpeg";
 
 const SLIDE_MS = 6500;
