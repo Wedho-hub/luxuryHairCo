@@ -4,6 +4,7 @@ import Seo from "../components/Seo";
 import Footer from "../components/Footer";
 
 const WHATSAPP_NUMBER = "27825551234";
+const fmt = (n) => Number(n).toLocaleString("en-ZA");
 
 const OrderSuccess = () => {
   const location = useLocation();
@@ -74,7 +75,7 @@ const OrderSuccess = () => {
                           <p className="font-semibold text-black">{item.productName}</p>
                           <p className="mt-1 text-sm text-gray-600">Qty: {item.quantity}</p>
                         </div>
-                        <p className="font-semibold text-black">R{item.price * item.quantity}</p>
+                        <p className="font-semibold text-black">R{fmt(item.price * item.quantity)}</p>
                       </div>
                     </div>
                   ))}
@@ -82,7 +83,7 @@ const OrderSuccess = () => {
 
                 <div className="mt-6 flex items-center justify-between rounded-3xl bg-[#fdf0f4] p-6">
                   <p className="text-[11px] uppercase tracking-[0.34em] text-[#c73b6c]">Order total</p>
-                  <p className="text-3xl font-semibold text-black">R{order.total}</p>
+                  <p className="font-cormorant text-3xl font-light italic text-black">R{fmt(order.total)}</p>
                 </div>
               </div>
 
