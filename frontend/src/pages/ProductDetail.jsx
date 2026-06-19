@@ -216,18 +216,32 @@ const ProductDetail = () => {
           </div>
 
           {/* ── Video ── */}
-          {embedUrl && (
+          {(embedUrl || product.videoUrl === "placeholder") && (
             <div className="mt-14">
               <p className="text-xs font-semibold uppercase tracking-[0.24em] text-gray-700">Watch {product.name}</p>
-              <div className="mt-4 aspect-video w-full overflow-hidden rounded-3xl shadow-sm">
-                <iframe
-                  src={embedUrl}
-                  title={`${product.name} video`}
-                  className="h-full w-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
+              {embedUrl ? (
+                <div className="mt-4 aspect-video w-full overflow-hidden rounded-3xl shadow-sm">
+                  <iframe
+                    src={embedUrl}
+                    title={`${product.name} video`}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+              ) : (
+                <div className="mt-4 flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-3xl bg-[#070206] px-6 text-center">
+                  <span className="flex h-14 w-14 items-center justify-center rounded-full bg-[#d4af37]/15">
+                    <svg viewBox="0 0 24 24" className="h-6 w-6 text-[#d4af37]" fill="currentColor" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                  <p className="font-cormorant text-xl font-light italic text-[#d4af37]">Video coming soon</p>
+                  <p className="max-w-xs text-xs leading-5 text-[#9e8e80]">
+                    We're filming a styling video for {product.name} — check back soon, or ask our team on WhatsApp.
+                  </p>
+                </div>
+              )}
             </div>
           )}
 

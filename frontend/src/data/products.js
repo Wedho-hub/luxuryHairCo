@@ -75,7 +75,7 @@ export const products = [
     ],
     perfectFor: "Business professionals, luxury minimalists, everyday elegance, and women who prefer a polished look.",
     hairCare: "Wash with sulphate-free shampoo, deep condition monthly, and store on a wig stand to maintain shape and shine.",
-    videoUrl: null,
+    videoUrl: "placeholder",
   },
   {
     id: 2,
@@ -115,7 +115,7 @@ export const products = [
     stylingOptions: ["Sleek straight finish", "Soft curls", "Beach-inspired waves", "Side-part glamour"],
     perfectFor: "Luxury vacations, brunch dates, content creators, and women who love warm-toned glamour.",
     hairCare: "Use a moisturizing hair mask regularly to maintain colour vibrancy and softness.",
-    videoUrl: null,
+    videoUrl: "placeholder",
   },
 
   // ── 16 Inch ──────────────────────────────────────────────────────────────
@@ -138,7 +138,7 @@ export const products = [
     stylingOptions: ["Bone-straight finish", "Soft body waves", "Loose curls"],
     perfectFor: "Women seeking an everyday luxury unit that works for every occasion.",
     hairCare: "Detangle gently from ends to roots and deep condition regularly to preserve softness.",
-    videoUrl: null,
+    videoUrl: "placeholder",
   },
   {
     id: 5,
@@ -159,7 +159,7 @@ export const products = [
     stylingOptions: ["Straight sleek look", "Glamorous curls", "Romantic waves", "Soft volume styling"],
     perfectFor: "Luxury dinners, photoshoots, celebrations, and special occasions.",
     hairCare: "Use heat protectant before styling and store away from direct sunlight to preserve colour richness.",
-    videoUrl: null,
+    videoUrl: "placeholder",
   },
   {
     id: 20,
