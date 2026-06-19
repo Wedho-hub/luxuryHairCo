@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const COLOR_DOT = {
@@ -24,7 +24,9 @@ const ProductCard = ({ product }) => {
     return () => window.clearTimeout(timer);
   }, [toastVisible]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     const existing = cartItems.find((item) => item.id === product.id);
     setToastMessage(
       existing
@@ -35,12 +37,22 @@ const ProductCard = ({ product }) => {
     setToastVisible(true);
   };
 
-  const handleOrderNow = () => {
+  const handleOrderNow = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
     navigate("/checkout", { state: { product } });
   };
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow,border-color] duration-700 hover:-translate-y-2 hover:border-[#d4af37]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.10)]">
+      {/* Whole-card link — sits beneath the action buttons (z-10) so it covers
+          everything else (image, badges, text) without blocking the buttons */}
+      <Link
+        to={`/product/${product.id}`}
+        aria-label={`View ${product.name} details`}
+        className="absolute inset-0 z-0"
+      />
+
       {/* Image */}
       <div className="relative h-[22rem] overflow-hidden">
         <img
@@ -69,10 +81,20 @@ const ProductCard = ({ product }) => {
         <span className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-bold text-black shadow backdrop-blur-sm">
           {product.length} inch
         </span>
+
+        {/* Gallery indicator — bottom-right, only if multiple photos */}
+        {product.gallery?.length > 1 && (
+          <span className="absolute bottom-4 right-4 flex items-center gap-1 rounded-full bg-black/60 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+            <svg viewBox="0 0 24 24" className="h-3 w-3" fill="currentColor" aria-hidden="true">
+              <path d="M4 4h16v12H4V4zm2 10h12L13.5 8 10 12.5 8 10l-2 4zM2 8v12h16v-2H4V8H2z" />
+            </svg>
+            {product.gallery.length}
+          </span>
+        )}
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-6">
+      <div className="relative flex flex-1 flex-col p-6">
         {/* Colour chip */}
         <div className="flex items-center gap-2">
           <span
@@ -87,9 +109,9 @@ const ProductCard = ({ product }) => {
         {/* Name */}
         <h3 className="mt-3 font-cormorant text-2xl font-medium italic text-black transition-colors duration-500 group-hover:text-[#b8941f]">{product.name}</h3>
 
-        {/* Spec line */}
+        {/* Tagline or spec line */}
         <p className="mt-1 text-sm text-gray-600">
-          Raw Vietnamese · {product.texture}
+          {product.tagline || `Raw Vietnamese · ${product.texture}`}
         </p>
 
         {/* Price */}
@@ -100,8 +122,8 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        {/* Actions */}
-        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+        {/* Actions — relative + z-10 keeps these clickable above the card-wide link */}
+        <div className="relative z-10 mt-4 grid gap-3 sm:grid-cols-2">
           <button
             type="button"
             onClick={handleAddToCart}

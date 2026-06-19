@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 
 const defaultMeta = {
-  title: "Silk Sculpture Hair | Premium Hair Bundles in Cape Town",
+  title: "Silk Sculpture Hair | 100% Raw Vietnamese Hair — Luxury Grade Quality",
   description:
-    "Silk Sculpture Hair offers premium raw Vietnamese hair bundles in Cape Town with same-day delivery, secure checkout, and expert styling support.",
+    "Silk Sculpture Hair Unit is handcrafted using premium Raw Vietnamese Hair — exceptional softness, longevity, natural luster, and versatility. Cape Town same-day delivery, secure checkout, expert styling support.",
   keywords:
-    "silk sculpture hair, raw Vietnamese hair, Cape Town hair bundles, premium hair extensions, human hair South Africa, full frontal wig Cape Town",
+    "silk sculpture hair, raw vietnamese hair, luxury grade hair, Cape Town hair bundles, premium hair extensions, human hair South Africa, full frontal wig Cape Town",
   author: "Silk Sculpture Hair",
   url: "https://luxuryhairco.example.com",
 };

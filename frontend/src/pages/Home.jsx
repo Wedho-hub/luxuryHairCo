@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Seo from "../components/Seo";
 import Hero from "../components/Hero";
@@ -31,8 +32,8 @@ const Home = () => {
   return (
     <main className="bg-white text-gray-900">
       <Seo
-        title="Silk Sculpture Hair | Premium Hair Bundles in Cape Town"
-        description="Shop premium raw Vietnamese hair bundles in Cape Town. Same-day delivery, expert styling advice, and secure checkout."
+        title="Silk Sculpture Hair | 100% Raw Vietnamese Hair — Luxury Grade Quality"
+        description="Handcrafted using premium Raw Vietnamese Hair sourced for softness, longevity, and natural luster. Same-day Cape Town delivery, expert styling advice, and secure checkout."
         url="https://luxuryhairco.github.io/"
       />
       <Header />
@@ -69,16 +70,38 @@ const Home = () => {
           </div>
 
           {showMore && (
-            <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-              {extended.map((product, i) => (
-                <div
-                  key={product.id}
-                  className="animate-fade-up"
-                  style={{ animationDelay: `${i * 55}ms` }}
-                >
-                  <ProductCard product={product} />
-                </div>
-              ))}
+            <div className="mt-10 border-t border-gray-100 pt-10">
+              <p className="text-xs uppercase tracking-[0.28em] text-gray-500">More styles · photography coming soon</p>
+              <div className="mt-5 divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-100">
+                {extended.map((product, i) => (
+                  <Link
+                    key={product.id}
+                    to={`/product/${product.id}`}
+                    className="group flex animate-fade-up items-center gap-4 bg-white p-4 transition-colors hover:bg-[#fdf0f4] sm:gap-5 sm:p-5"
+                    style={{ animationDelay: `${i * 35}ms` }}
+                  >
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="h-16 w-16 shrink-0 rounded-2xl object-cover object-top sm:h-20 sm:w-20"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="font-cormorant text-lg font-medium italic text-black transition-colors group-hover:text-[#b8941f] sm:text-xl">
+                        {product.name}
+                      </p>
+                      <p className="mt-0.5 truncate text-xs text-gray-500">
+                        {product.length} inch · {product.tier} · {product.color}
+                      </p>
+                    </div>
+                    <p className="shrink-0 text-sm font-semibold text-black sm:text-base">
+                      R{product.price.toLocaleString("en-ZA")}
+                    </p>
+                    <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-gray-300 transition group-hover:text-[#c73b6c]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
             </div>
           )}
 
