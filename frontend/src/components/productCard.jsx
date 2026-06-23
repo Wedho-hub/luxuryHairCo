@@ -52,7 +52,7 @@ const ProductCard = ({ product, onSelect }) => {
         type="button"
         onClick={() => onSelect(product)}
         aria-label={`View ${product.name} details`}
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-[1]"
       />
 
       {/* Image */}
