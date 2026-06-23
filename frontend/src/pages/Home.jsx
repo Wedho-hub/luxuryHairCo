@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Seo from "../components/Seo";
 import Hero from "../components/Hero";
@@ -9,6 +8,7 @@ import Offer from "../components/Offer";
 import FAQ from "../components/FAQ";
 import WhatsAppButton from "../components/WhatsAppButton";
 import ProductCard from "../components/productCard";
+import ProductModal from "../components/ProductModal";
 import LeadForm from "../components/LeadForm";
 import Footer from "../components/Footer";
 import { products } from "../data/products";
@@ -22,6 +22,7 @@ const discountItems = [
 
 const Home = () => {
   const [showMore, setShowMore] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
   const [productHeaderRef, productHeaderVisible] = useInView();
   const [gridRef, gridVisible] = useInView(0.04);
   const [discountRef, discountVisible] = useInView(0.1);
@@ -64,7 +65,7 @@ const Home = () => {
                 className={gridVisible ? "animate-fade-up" : "opacity-0"}
                 style={{ animationDelay: `${i * 55}ms` }}
               >
-                <ProductCard product={product} />
+                <ProductCard product={product} onSelect={setSelectedProduct} />
               </div>
             ))}
           </div>
@@ -74,10 +75,11 @@ const Home = () => {
               <p className="text-xs uppercase tracking-[0.28em] text-gray-500">More styles · photography coming soon</p>
               <div className="mt-5 divide-y divide-gray-100 overflow-hidden rounded-3xl border border-gray-100">
                 {extended.map((product, i) => (
-                  <Link
+                  <button
+                    type="button"
                     key={product.id}
-                    to={`/product/${product.id}`}
-                    className="group flex animate-fade-up items-center gap-4 bg-white p-4 transition-colors hover:bg-[#fdf0f4] sm:gap-5 sm:p-5"
+                    onClick={() => setSelectedProduct(product)}
+                    className="group flex w-full animate-fade-up items-center gap-4 bg-white p-4 text-left transition-colors hover:bg-[#fdf0f4] sm:gap-5 sm:p-5"
                     style={{ animationDelay: `${i * 35}ms` }}
                   >
                     <img
@@ -99,7 +101,7 @@ const Home = () => {
                     <svg viewBox="0 0 24 24" className="h-4 w-4 shrink-0 text-gray-300 transition group-hover:text-[#c73b6c]" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
-                  </Link>
+                  </button>
                 ))}
               </div>
             </div>
@@ -159,6 +161,10 @@ const Home = () => {
       <FAQ />
       <WhatsAppButton />
       <Footer />
+
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      )}
     </main>
   );
 };

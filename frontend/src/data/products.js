@@ -321,6 +321,13 @@ export const products = [
     texture: "Straight",
     price: 17000,
     image: img.ombreA,
+    tagline: "The Perfect Blend Of Sophistication And Glamour.",
+    longDescription:
+      "Lori Luxe delivers luxury colour dimension and premium fullness. The expertly blended tones create a rich, multidimensional finish.",
+    stylingOptions: ["Hollywood curls", "Sleek straight styles", "Side-swept waves"],
+    perfectFor: "Women who appreciate high-end beauty and fashion-forward looks.",
+    hairCare: "Minimize product buildup by using lightweight styling products.",
+    videoUrl: null,
   },
 
   // ── 28 Inch ──────────────────────────────────────────────────────────────
@@ -335,6 +342,13 @@ export const products = [
     texture: "Straight",
     price: 17500,
     image: img.naturalC,
+    tagline: "Pure Luxury. Endless Elegance.",
+    longDescription:
+      "Onyx Silk offers breathtaking length, exceptional density, and unmatched softness. Every strand reflects premium craftsmanship and sophistication.",
+    stylingOptions: ["Bone-straight luxury look", "Loose waves", "Glam curls", "Elegant side part"],
+    perfectFor: "Women who want maximum glamour with a natural finish.",
+    hairCare: "Store on a mannequin head and brush gently using a wide-tooth comb.",
+    videoUrl: null,
   },
   {
     id: 15,
@@ -347,6 +361,13 @@ export const products = [
     texture: "Straight",
     price: 18400,
     image: img.burgundyB,
+    tagline: "For Women Who Love To Be Remembered.",
+    longDescription:
+      "Ruby Obsession combines luxurious burgundy colour with dramatic length for an unforgettable look. Every detail is designed to create impact and elegance.",
+    stylingOptions: ["Romantic curls", "Straight styles", "Half-up half-down looks"],
+    perfectFor: "Birthdays, luxury events, weddings, and vacations.",
+    hairCare: "Use colour-safe shampoos and condition regularly.",
+    videoUrl: null,
   },
   {
     id: 16,
@@ -359,6 +380,13 @@ export const products = [
     texture: "Straight",
     price: 18400,
     image: img.ombreB,
+    tagline: "Sophisticated Colour. Ultimate Luxury.",
+    longDescription:
+      "Espresso Luxe features expertly blended tones that create depth, dimension, and movement. The luxurious finish mimics custom salon colouring.",
+    stylingOptions: ["Glamorous waves", "Straight luxury finish", "Voluminous curls"],
+    perfectFor: "Luxury women who appreciate effortless beauty.",
+    hairCare: "Avoid excessive oil application near the roots.",
+    videoUrl: null,
   },
 
   // ── 30 Inch ──────────────────────────────────────────────────────────────
@@ -373,6 +401,13 @@ export const products = [
     texture: "Straight",
     price: 19000,
     image: img.naturalE,
+    tagline: "The Crown Jewel Of The RVH Luxury Collection.",
+    longDescription:
+      "Black Diamond Straight is designed for women who expect nothing but the best. Featuring ultra-long luxurious strands, exceptional density, and a flawless natural finish, this unit delivers unmatched glamour and prestige. This is more than hair — it is a statement of confidence, power, and luxury.",
+    stylingOptions: ["Bone-straight luxury finish", "Hollywood waves", "Glamorous curls", "Half-up half-down styling"],
+    perfectFor: "Luxury events, weddings, photoshoots, influencers, executives, and women who love premium beauty.",
+    hairCare: "Deep condition monthly, use heat protectant, and store properly to maximize longevity.",
+    videoUrl: null,
   },
   {
     id: 18,
@@ -385,6 +420,13 @@ export const products = [
     texture: "Straight",
     price: 19600,
     image: img.ombreA,
+    tagline: "Sultry Luxury With Unforgettable Dimension.",
+    longDescription:
+      "Midnight Mocha combines rich colour transitions and dramatic length to create a breathtaking luxury look. Every strand reflects sophistication and premium craftsmanship.",
+    stylingOptions: ["Luxury curls", "Sleek straight styling", "Hollywood waves"],
+    perfectFor: "Women who love high-fashion beauty and effortless glamour.",
+    hairCare: "Maintain moisture with nourishing conditioners and protect from excessive heat.",
+    videoUrl: null,
   },
   {
     id: 19,
@@ -397,5 +439,12 @@ export const products = [
     texture: "Straight",
     price: 19600,
     image: wineVelvet30,
+    tagline: "Luxury Colour. Ultimate Glamour.",
+    longDescription:
+      "Wine Velvet is the definition of statement luxury. The rich burgundy tone paired with dramatic 30-inch length creates an unforgettable look that radiates confidence, elegance, and exclusivity. Crafted for women who believe luxury should be seen, felt, and remembered.",
+    stylingOptions: ["Glam curls", "Side-part styling", "Hollywood waves", "Sleek straight finish"],
+    perfectFor: "Luxury celebrations, weddings, photoshoots, vacations, and women who love being the center of attention.",
+    hairCare: "Use sulphate-free products, deep condition regularly, and store carefully to preserve the luxurious quality.",
+    videoUrl: null,
   },
 ];

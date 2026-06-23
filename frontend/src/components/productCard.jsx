@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 
 const COLOR_DOT = {
@@ -10,7 +10,7 @@ const COLOR_DOT = {
   "Two Tone": "bg-gradient-to-r from-gray-900 to-[#8b4513]",
 };
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onSelect }) => {
   const { addToCart, cartItems } = useCart();
   const navigate = useNavigate();
   const [toastVisible, setToastVisible] = useState(false);
@@ -45,10 +45,12 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md transition-[transform,box-shadow,border-color] duration-700 hover:-translate-y-2 hover:border-[#d4af37]/20 hover:shadow-[0_24px_60px_rgba(0,0,0,0.10)]">
-      {/* Whole-card link — sits beneath the action buttons (z-10) so it covers
-          everything else (image, badges, text) without blocking the buttons */}
-      <Link
-        to={`/product/${product.id}`}
+      {/* Whole-card trigger — sits beneath the action buttons (z-10) so it
+          covers everything else (image, badges, text) without blocking them.
+          Opens the quick-view modal instead of navigating away. */}
+      <button
+        type="button"
+        onClick={() => onSelect(product)}
         aria-label={`View ${product.name} details`}
         className="absolute inset-0 z-0"
       />

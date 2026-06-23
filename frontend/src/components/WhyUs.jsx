@@ -43,9 +43,23 @@ const features = [
   },
 ];
 
+const checklist = [
+  "100% Raw Vietnamese Hair",
+  "Luxury Grade Quality",
+  "Thick From Root To Tip",
+  "Minimal Shedding",
+  "Can Be Dyed, Curled & Straightened",
+  "Reusable For Years With Proper Care",
+  "Soft, Silky & Full Luxury Density",
+  "Natural Hairline Finish",
+  "Beginner Friendly",
+  "Designed For The Woman Who Values Luxury, Confidence & Timeless Beauty",
+];
+
 const WhyUs = () => {
   const [headerRef, headerVisible] = useInView();
   const [gridRef, gridVisible] = useInView(0.05);
+  const [checklistRef, checklistVisible] = useInView(0.1);
 
   return (
     <section className="py-28 px-6 bg-[#070206]">
@@ -84,6 +98,39 @@ const WhyUs = () => {
               <p className="mt-3 text-sm leading-7 text-[#9e8e80]">{feature.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* ── Why Silk Sculpture Hair — material & quality checklist ── */}
+        <div
+          ref={checklistRef}
+          className={`mt-20 rounded-3xl border border-[#d4af37]/15 bg-gradient-to-br from-[#0c080f] to-[#070206] p-8 sm:p-12 ${
+            checklistVisible ? "animate-fade-up" : "opacity-0"
+          }`}
+        >
+          <p className="text-center font-cormorant text-3xl font-light italic text-white sm:text-4xl">
+            Why Silk Sculpture Hair?
+          </p>
+          <div className="mx-auto mt-10 grid max-w-3xl gap-x-10 gap-y-4 sm:grid-cols-2">
+            {checklist.map((item, i) => (
+              <div
+                key={item}
+                className={`flex items-start gap-3 ${checklistVisible ? "animate-fade-up" : "opacity-0"}`}
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  className="mt-0.5 h-4 w-4 shrink-0 text-[#d4af37]"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  aria-hidden="true"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+                <p className="text-sm leading-6 text-[#e1d3b7]">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

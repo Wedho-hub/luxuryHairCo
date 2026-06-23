@@ -6,6 +6,7 @@ import Seo from "../components/Seo";
 import ProductGallery from "../components/ProductGallery";
 import { products } from "../data/products";
 import { useCart } from "../context/CartContext";
+import { getYouTubeEmbed } from "../utils/youtube";
 
 const COLOR_DOT = {
   Natural: "bg-gray-900",
@@ -13,12 +14,6 @@ const COLOR_DOT = {
   "Colour 33": "bg-[#8b4513]",
   Brown: "bg-[#6f4e37]",
   "Two Tone": "bg-gradient-to-r from-gray-900 to-[#8b4513]",
-};
-
-const getYouTubeEmbed = (url) => {
-  if (!url) return null;
-  const match = url.match(/(?:youtu\.be\/|v=|embed\/)([\w-]{11})/);
-  return match ? `https://www.youtube.com/embed/${match[1]}` : null;
 };
 
 const ProductDetail = () => {
