@@ -1,13 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
   <!-- Brand dark background -->
-  <rect width="32" height="32" rx="7" fill="#090307"/>
-  <!-- Gold circle mark (scaled from 200px to fit ~28px with 2px padding) -->
-  <g transform="translate(2 2) scale(0.14)">
-    <circle cx="100" cy="98" r="90" fill="#c9a227"/>
-    <!-- Hair dark mass -->
-    <path fill="#1a1008" d="M82 36 C88 18,108 8,128 14 C148 20,162 40,168 66 C172 88,168 116,156 136 C146 152,130 162,114 165 C104 168,95 163,93 153 C91 143,94 128,96 112 C98 96,100 80,96 66 C92 54,86 44,82 38 Z"/>
-    <!-- Sunglasses -->
-    <ellipse cx="75" cy="83" rx="13" ry="10" fill="#0a0800" opacity="0.93"/>
-    <ellipse cx="91" cy="78" rx="13" ry="10" fill="#0a0800" opacity="0.93"/>
-  </g>
+  <rect width="32" height="32" rx="7" fill="#0b0710"/>
+  <!-- Gold ribbon "S" mark, in the spirit of the Silk Sculpture Hair logo -->
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7d786"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a8791e"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M 20.5 8.5 C 14.5 8.5 10 11 10 14.5 C 10 17.8 14.8 17.4 17.6 18.4 C 21 19.6 19 23.6 13.5 24.8"
+    fill="none"
+    stroke="url(#goldGrad)"
+    stroke-width="3.2"
+    stroke-linecap="round"
+  />
 </svg>
