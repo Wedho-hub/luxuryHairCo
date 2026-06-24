@@ -1,13 +1,12 @@
-import newLogo from "../assets/newlogo.jpeg";
+import iconName from "../assets/silk-sculpture-hair-icon-name.svg";
+import full from "../assets/silk-sculpture-hair-full.svg";
 
-const Logo = ({ className = "" }) => (
-  <div className={`flex items-center ${className}`}>
-    <img
-      src={newLogo}
-      alt="Silk Sculpture Hair — The Art of Luxury"
-      className="h-14 w-14 rounded-2xl bg-white object-contain p-1 shadow-sm sm:h-16 sm:w-16"
-    />
-  </div>
+const Logo = ({ className = "", variant = "compact" }) => (
+  <img
+    src={variant === "full" ? full : iconName}
+    alt="Silk Sculpture Hair — The Art of Luxury"
+    className={`h-12 w-auto sm:h-14 ${className}`}
+  />
 );
 
 export default Logo;

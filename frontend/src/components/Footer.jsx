@@ -1,12 +1,20 @@
 import { Link } from "react-router-dom";
 import Logo from "./Logo";
+import icon from "../assets/silk-sculpture-hair-icon.svg";
 
 const Footer = () => {
   return (
-    <footer id="site-footer" className="border-t border-white/10 bg-[#070307] text-[#f6e8d3]">
+    <footer id="site-footer" className="relative overflow-hidden border-t border-white/10 bg-[#070307] text-[#f6e8d3]">
+      {/* Faint gold S watermark — subtle luxury texture, sits behind all content */}
+      <img
+        src={icon}
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 -top-16 -z-10 h-[26rem] w-auto opacity-[0.05] sm:-right-6 sm:h-[32rem]"
+      />
       <div className="mx-auto max-w-7xl px-6 pt-10 pb-4">
         <Link to="/" aria-label="Silk Sculpture Hair — home">
-          <Logo />
+          <Logo variant="full" className="h-20 sm:h-24" />
         </Link>
         <div className="mt-1 h-px bg-white/10 mb-10" />
       </div>
