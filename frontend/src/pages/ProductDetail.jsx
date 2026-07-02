@@ -101,12 +101,12 @@ const ProductDetail = () => {
 
           <div className="mt-6 grid gap-10 lg:grid-cols-2 lg:gap-14">
             {/* ── Gallery ── */}
-            <div>
+            <div className="animate-fade-up" style={{ animationDelay: "60ms" }}>
               <ProductGallery images={gallery} alt={product.name} />
             </div>
 
             {/* ── Info ── */}
-            <div>
+            <div className="animate-fade-up" style={{ animationDelay: "140ms" }}>
               {/* Badges */}
               <div className="flex flex-wrap items-center gap-2">
                 <span

@@ -1,11 +1,21 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCart } from "../context/CartContext";
 import Logo from "./Logo";
 
 const Header = () => {
   const { cartCount } = useCart();
+  const { pathname } = useLocation();
   const [isFooterVisible, setIsFooterVisible] = useState(false);
+
+  // Clicking the logo/Shop while already on "/" is a same-route click —
+  // the router won't navigate or reset scroll, so do it manually.
+  const handleHomeLinkClick = (e) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   useEffect(() => {
     const footer = document.getElementById("site-footer");
@@ -29,7 +39,7 @@ const Header = () => {
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4">
           {/* Brand logo */}
-          <Link to="/" aria-label="Silk Sculpture Hair — home">
+          <Link to="/" onClick={handleHomeLinkClick} aria-label="Silk Sculpture Hair — home">
             <Logo />
           </Link>
 
@@ -37,6 +47,7 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <Link
               to="/"
+              onClick={handleHomeLinkClick}
               className="hidden sm:inline text-sm font-semibold uppercase tracking-[0.12em] text-white/80 transition hover:text-[#f3ddb2] active:opacity-70 select-none"
             >
               Shop

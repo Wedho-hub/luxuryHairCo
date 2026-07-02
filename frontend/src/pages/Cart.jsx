@@ -23,7 +23,7 @@ const Cart = () => {
         <div className="mx-auto max-w-6xl">
 
           {/* ── Page header ── */}
-          <div className="mb-8 rounded-3xl bg-white p-6 shadow-sm sm:p-8 md:p-10">
+          <div className="mb-8 animate-fade-up rounded-3xl bg-white p-6 shadow-sm sm:p-8 md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-[#c73b6c]">Your cart</p>
@@ -49,7 +49,10 @@ const Cart = () => {
 
           {/* ── Empty state ── */}
           {cartItems.length === 0 ? (
-            <div className="rounded-3xl border border-[#c73b6c]/20 bg-white p-12 text-center shadow-sm">
+            <div
+              className="animate-fade-up rounded-3xl border border-[#c73b6c]/20 bg-white p-12 text-center shadow-sm"
+              style={{ animationDelay: "80ms" }}
+            >
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-[#fdf0f4]">
                 <svg viewBox="0 0 24 24" className="h-8 w-8 text-[#c73b6c]/60" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007z" />
@@ -67,7 +70,7 @@ const Cart = () => {
               </Link>
             </div>
           ) : (
-            <div className="space-y-6">
+            <div className="animate-fade-up space-y-6" style={{ animationDelay: "80ms" }}>
 
               {/* ── Cart items ── */}
               <div className="overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm">

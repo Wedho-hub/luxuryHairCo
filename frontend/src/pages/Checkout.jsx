@@ -161,7 +161,7 @@ const Checkout = () => {
         <div className="mx-auto max-w-6xl">
 
           {/* ── Page header ── */}
-          <div className="mb-8 rounded-3xl bg-white p-6 shadow-sm sm:p-8 md:p-10">
+          <div className="mb-8 animate-fade-up rounded-3xl bg-white p-6 shadow-sm sm:p-8 md:p-10">
             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
               <div>
                 <p className="text-xs uppercase tracking-[0.28em] text-[#c73b6c]">Secure checkout</p>
@@ -185,7 +185,10 @@ const Checkout = () => {
 
           {/* ── No products guard ── */}
           {!productsToCheckout.length ? (
-            <div className="rounded-3xl border border-[#c73b6c]/20 bg-white p-10 text-center shadow-sm text-gray-700">
+            <div
+              className="animate-fade-up rounded-3xl border border-[#c73b6c]/20 bg-white p-10 text-center shadow-sm text-gray-700"
+              style={{ animationDelay: "80ms" }}
+            >
               <p className="font-cormorant text-2xl font-light italic">No bundle selected yet.</p>
               <p className="mt-3 text-sm text-gray-600">
                 Pick one or more products from the shop before checking out.
@@ -198,7 +201,7 @@ const Checkout = () => {
               </Link>
             </div>
           ) : (
-            <div className="grid gap-10 lg:grid-cols-[1fr_0.75fr]">
+            <div className="animate-fade-up grid gap-10 lg:grid-cols-[1fr_0.75fr]" style={{ animationDelay: "80ms" }}>
 
               {/* ── Left column: summary + form ── */}
               <div className="space-y-6">
