@@ -1,11 +1,14 @@
+import iconImg from "../assets/silk-sculpture-hair-icon.svg";
 import iconName from "../assets/silk-sculpture-hair-icon-name.svg";
 import full from "../assets/silk-sculpture-hair-full.svg";
 
-const Logo = ({ className = "", variant = "compact" }) => (
+const SRCS = { icon: iconImg, compact: iconName, full };
+
+const Logo = ({ className = "h-12 w-auto sm:h-14", variant = "compact" }) => (
   <img
-    src={variant === "full" ? full : iconName}
+    src={SRCS[variant] ?? iconName}
     alt="Silk Sculpture Hair — The Art of Luxury"
-    className={`h-12 w-auto sm:h-14 ${className}`}
+    className={className}
   />
 );
 
